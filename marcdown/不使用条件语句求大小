@@ -1,0 +1,46 @@
+# 算法
+####给定三个整数，在不使用条件语句，和三木运算符的情况下，算出最大，最小。
+#####方法 1：
+	运用布尔表达式的短路原理，x && y ,如果x为真，才会执行y。比如（a>b）&& (a = b),如果a>b为真，执行a = b，操作。
+接下来是代码
+
+	int maximum1(int a,int b,int c)
+	{
+    	int max = a;
+   	 	(max<b)&&(max=b);
+   	   (max<c)&&(max=c);
+    	return max;
+	}
+	int minmum1(int a, int b, int c){
+    
+   	    int min = a;
+       (min>b)&&(min = b);
+       (min>c)&&(min=c);
+       return min;
+	}
+	
+	int main (int argc, const char * argv[]){
+		@autoreleasepool {
+			NSLog(@"%d--%d",maximum1(6, 3, 9),minmum1(6, 3, 9));
+			NSLog(@"%d--%d",maximum2(6, 3, 9),minmum2(6, 3, 9));
+		
+		}
+		return 0;
+	}
+打印结果：
+![](/Users/navchina/Desktop/屏幕快照 2018-08-16 上午11.04.58.png)
+
+##### 方法 2：运用数组下标
+
+	int maximum2(int a,int b,int c){
+    	int arr0[] = {a,b};
+    	int arr1[] = {arr0[a<b],c};
+    	return arr1[arr1[0]<c];
+	}
+	int minmum2(int a, int b, int c){
+    	int arr0[] = {a,b};
+    	int arr1[] = {arr0[a>b],c};
+    	return arr1[arr1[0]>c];
+	}
+
+这样结果也是一样的。

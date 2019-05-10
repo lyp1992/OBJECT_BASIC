@@ -1,0 +1,10 @@
+
+
+
+platform :ios, '8.0'
+
+  target '本地私有库Tests' do
+   use_frameworks!
+
+	pod 'TestPod',:git => 'https://gitee.com/lyplyx/TestPod.git'
+end

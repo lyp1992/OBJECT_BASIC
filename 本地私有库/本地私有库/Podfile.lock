@@ -1,0 +1,21 @@
+PODS:
+  - TestPod (0.1.1)
+
+DEPENDENCIES:
+  - TestPod (from `https://gitee.com/lyplyx/TestPod.git`)
+
+EXTERNAL SOURCES:
+  TestPod:
+    :git: https://gitee.com/lyplyx/TestPod.git
+
+CHECKOUT OPTIONS:
+  TestPod:
+    :commit: 643b80dc499625aecc971be4b6c6691c039d7bb7
+    :git: https://gitee.com/lyplyx/TestPod.git
+
+SPEC CHECKSUMS:
+  TestPod: 696ebe1b733bbee0dd33c90c01de56c9a40555e3
+
+PODFILE CHECKSUM: e3759d0b601c2d0025f7ef19e005a9ce44f04775
+
+COCOAPODS: 1.5.3

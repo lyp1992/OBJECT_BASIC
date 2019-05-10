@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		994585F221E4A4A800D3CC2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994585F121E4A4A800D3CC2D /* AppDelegate.swift */; };
+		994585F421E4A4A800D3CC2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994585F321E4A4A800D3CC2D /* ViewController.swift */; };
+		994585F721E4A4A800D3CC2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994585F521E4A4A800D3CC2D /* Main.storyboard */; };
+		994585F921E4A4A900D3CC2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994585F821E4A4A900D3CC2D /* Assets.xcassets */; };
+		994585FC21E4A4A900D3CC2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994585FA21E4A4A900D3CC2D /* LaunchScreen.storyboard */; };
+		9945860721E4A4A900D3CC2D /* YPIMClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945860621E4A4A900D3CC2D /* YPIMClientTests.swift */; };
+		9945861221E4A4A900D3CC2D /* YPIMClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945861121E4A4A900D3CC2D /* YPIMClientUITests.swift */; };
+		9945862621E4A4D500D3CC2D /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 9945862121E4A4D500D3CC2D /* yudpsocket.c */; };
+		9945862721E4A4D500D3CC2D /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945862221E4A4D500D3CC2D /* yudpsocket.swift */; };
+		9945862821E4A4D500D3CC2D /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 9945862321E4A4D500D3CC2D /* ytcpsocket.c */; };
+		9945862921E4A4D500D3CC2D /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945862421E4A4D500D3CC2D /* ysocket.swift */; };
+		9945862A21E4A4D500D3CC2D /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945862521E4A4D500D3CC2D /* ytcpsocket.swift */; };
+		9945862C21E4A64A00D3CC2D /* IMMessage.proto in Sources */ = {isa = PBXBuildFile; fileRef = 9945862B21E4A64A00D3CC2D /* IMMessage.proto */; };
+		9945862E21E4A67000D3CC2D /* ProtocolBuffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9945862D21E4A67000D3CC2D /* ProtocolBuffers.framework */; };
+		9945863021E4A70000D3CC2D /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945862F21E4A70000D3CC2D /* Immessage.proto.swift */; };
+		9945863221E4A73300D3CC2D /* YPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945863121E4A73300D3CC2D /* YPSocket.swift */; };
+		B6D9A2B7C244FF9E291B92BF /* Pods_YPIMClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7619950EAD8C4AF97FD9096 /* Pods_YPIMClientUITests.framework */; };
+		C11393E94E7678D2072FF38B /* Pods_YPIMClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6A61FA5775C97A07AA2232 /* Pods_YPIMClientTests.framework */; };
+		EEEEEDA28A307520B6BD0ECD /* Pods_YPIMClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91C1677329CACCE00496DB8 /* Pods_YPIMClient.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9945860321E4A4A900D3CC2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 994585E621E4A4A800D3CC2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 994585ED21E4A4A800D3CC2D;
+			remoteInfo = YPIMClient;
+		};
+		9945860E21E4A4A900D3CC2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 994585E621E4A4A800D3CC2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 994585ED21E4A4A800D3CC2D;
+			remoteInfo = YPIMClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04710417470CEE6E1E99B770 /* Pods-YPIMClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPIMClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YPIMClientTests/Pods-YPIMClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		047C6FE191E3BC2FC5E4F2FD /* Pods-YPIMClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPIMClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YPIMClient/Pods-YPIMClient.debug.xcconfig"; sourceTree = "<group>"; };
+		67F07FF5EC7CB0502A7DD292 /* Pods-YPIMClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPIMClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YPIMClientTests/Pods-YPIMClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95FD46D678D8D08DA906CD48 /* Pods-YPIMClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPIMClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-YPIMClient/Pods-YPIMClient.release.xcconfig"; sourceTree = "<group>"; };
+		994585EE21E4A4A800D3CC2D /* YPIMClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPIMClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		994585F121E4A4A800D3CC2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		994585F321E4A4A800D3CC2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		994585F621E4A4A800D3CC2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		994585F821E4A4A900D3CC2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		994585FB21E4A4A900D3CC2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		994585FD21E4A4A900D3CC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9945860221E4A4A900D3CC2D /* YPIMClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YPIMClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9945860621E4A4A900D3CC2D /* YPIMClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPIMClientTests.swift; sourceTree = "<group>"; };
+		9945860821E4A4A900D3CC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9945860D21E4A4A900D3CC2D /* YPIMClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YPIMClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9945861121E4A4A900D3CC2D /* YPIMClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPIMClientUITests.swift; sourceTree = "<group>"; };
+		9945861321E4A4A900D3CC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9945862121E4A4D500D3CC2D /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		9945862221E4A4D500D3CC2D /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		9945862321E4A4D500D3CC2D /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		9945862421E4A4D500D3CC2D /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		9945862521E4A4D500D3CC2D /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		9945862B21E4A64A00D3CC2D /* IMMessage.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = IMMessage.proto; sourceTree = "<group>"; };
+		9945862D21E4A67000D3CC2D /* ProtocolBuffers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProtocolBuffers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9945862F21E4A70000D3CC2D /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
+		9945863121E4A73300D3CC2D /* YPSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPSocket.swift; sourceTree = "<group>"; };
+		A7619950EAD8C4AF97FD9096 /* Pods_YPIMClientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YPIMClientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6A61FA5775C97A07AA2232 /* Pods_YPIMClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YPIMClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4B5468025E802A966339F9 /* Pods-YPIMClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPIMClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YPIMClientUITests/Pods-YPIMClientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F210A19378479FEFE48F56B4 /* Pods-YPIMClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPIMClientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YPIMClientUITests/Pods-YPIMClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F91C1677329CACCE00496DB8 /* Pods_YPIMClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YPIMClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		994585EB21E4A4A800D3CC2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9945862E21E4A67000D3CC2D /* ProtocolBuffers.framework in Frameworks */,
+				EEEEEDA28A307520B6BD0ECD /* Pods_YPIMClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		994585FF21E4A4A900D3CC2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C11393E94E7678D2072FF38B /* Pods_YPIMClientTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9945860A21E4A4A900D3CC2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D9A2B7C244FF9E291B92BF /* Pods_YPIMClientUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		121D49CCC4E37C2C3B0724FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9945862D21E4A67000D3CC2D /* ProtocolBuffers.framework */,
+				F91C1677329CACCE00496DB8 /* Pods_YPIMClient.framework */,
+				BD6A61FA5775C97A07AA2232 /* Pods_YPIMClientTests.framework */,
+				A7619950EAD8C4AF97FD9096 /* Pods_YPIMClientUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F0DE0321F478BE1614117CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				047C6FE191E3BC2FC5E4F2FD /* Pods-YPIMClient.debug.xcconfig */,
+				95FD46D678D8D08DA906CD48 /* Pods-YPIMClient.release.xcconfig */,
+				67F07FF5EC7CB0502A7DD292 /* Pods-YPIMClientTests.debug.xcconfig */,
+				04710417470CEE6E1E99B770 /* Pods-YPIMClientTests.release.xcconfig */,
+				F210A19378479FEFE48F56B4 /* Pods-YPIMClientUITests.debug.xcconfig */,
+				BE4B5468025E802A966339F9 /* Pods-YPIMClientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		994585E521E4A4A800D3CC2D = {
+			isa = PBXGroup;
+			children = (
+				994585F021E4A4A800D3CC2D /* YPIMClient */,
+				9945860521E4A4A900D3CC2D /* YPIMClientTests */,
+				9945861021E4A4A900D3CC2D /* YPIMClientUITests */,
+				994585EF21E4A4A800D3CC2D /* Products */,
+				3F0DE0321F478BE1614117CA /* Pods */,
+				121D49CCC4E37C2C3B0724FE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		994585EF21E4A4A800D3CC2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				994585EE21E4A4A800D3CC2D /* YPIMClient.app */,
+				9945860221E4A4A900D3CC2D /* YPIMClientTests.xctest */,
+				9945860D21E4A4A900D3CC2D /* YPIMClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		994585F021E4A4A800D3CC2D /* YPIMClient */ = {
+			isa = PBXGroup;
+			children = (
+				9945861F21E4A4C400D3CC2D /* YPIMClient */,
+				994585F121E4A4A800D3CC2D /* AppDelegate.swift */,
+				994585F321E4A4A800D3CC2D /* ViewController.swift */,
+				994585F521E4A4A800D3CC2D /* Main.storyboard */,
+				994585F821E4A4A900D3CC2D /* Assets.xcassets */,
+				994585FA21E4A4A900D3CC2D /* LaunchScreen.storyboard */,
+				994585FD21E4A4A900D3CC2D /* Info.plist */,
+			);
+			path = YPIMClient;
+			sourceTree = "<group>";
+		};
+		9945860521E4A4A900D3CC2D /* YPIMClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				9945860621E4A4A900D3CC2D /* YPIMClientTests.swift */,
+				9945860821E4A4A900D3CC2D /* Info.plist */,
+			);
+			path = YPIMClientTests;
+			sourceTree = "<group>";
+		};
+		9945861021E4A4A900D3CC2D /* YPIMClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9945861121E4A4A900D3CC2D /* YPIMClientUITests.swift */,
+				9945861321E4A4A900D3CC2D /* Info.plist */,
+			);
+			path = YPIMClientUITests;
+			sourceTree = "<group>";
+		};
+		9945861F21E4A4C400D3CC2D /* YPIMClient */ = {
+			isa = PBXGroup;
+			children = (
+				9945862021E4A4D500D3CC2D /* ysocket */,
+				9945862B21E4A64A00D3CC2D /* IMMessage.proto */,
+				9945862F21E4A70000D3CC2D /* Immessage.proto.swift */,
+				9945863121E4A73300D3CC2D /* YPSocket.swift */,
+			);
+			path = YPIMClient;
+			sourceTree = "<group>";
+		};
+		9945862021E4A4D500D3CC2D /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				9945862121E4A4D500D3CC2D /* yudpsocket.c */,
+				9945862221E4A4D500D3CC2D /* yudpsocket.swift */,
+				9945862321E4A4D500D3CC2D /* ytcpsocket.c */,
+				9945862421E4A4D500D3CC2D /* ysocket.swift */,
+				9945862521E4A4D500D3CC2D /* ytcpsocket.swift */,
+			);
+			path = ysocket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		994585ED21E4A4A800D3CC2D /* YPIMClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9945861621E4A4A900D3CC2D /* Build configuration list for PBXNativeTarget "YPIMClient" */;
+			buildPhases = (
+				7BDA6FD6194CB9A09ECF0069 /* [CP] Check Pods Manifest.lock */,
+				994585EA21E4A4A800D3CC2D /* Sources */,
+				994585EB21E4A4A800D3CC2D /* Frameworks */,
+				994585EC21E4A4A800D3CC2D /* Resources */,
+				23D5D65492F4418500D55640 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YPIMClient;
+			productName = YPIMClient;
+			productReference = 994585EE21E4A4A800D3CC2D /* YPIMClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9945860121E4A4A900D3CC2D /* YPIMClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9945861921E4A4A900D3CC2D /* Build configuration list for PBXNativeTarget "YPIMClientTests" */;
+			buildPhases = (
+				082E62A4A82C186B0B114483 /* [CP] Check Pods Manifest.lock */,
+				994585FE21E4A4A900D3CC2D /* Sources */,
+				994585FF21E4A4A900D3CC2D /* Frameworks */,
+				9945860021E4A4A900D3CC2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9945860421E4A4A900D3CC2D /* PBXTargetDependency */,
+			);
+			name = YPIMClientTests;
+			productName = YPIMClientTests;
+			productReference = 9945860221E4A4A900D3CC2D /* YPIMClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9945860C21E4A4A900D3CC2D /* YPIMClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9945861C21E4A4A900D3CC2D /* Build configuration list for PBXNativeTarget "YPIMClientUITests" */;
+			buildPhases = (
+				51CFE0E6BE1A1AE8D64DA123 /* [CP] Check Pods Manifest.lock */,
+				9945860921E4A4A900D3CC2D /* Sources */,
+				9945860A21E4A4A900D3CC2D /* Frameworks */,
+				9945860B21E4A4A900D3CC2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9945860F21E4A4A900D3CC2D /* PBXTargetDependency */,
+			);
+			name = YPIMClientUITests;
+			productName = YPIMClientUITests;
+			productReference = 9945860D21E4A4A900D3CC2D /* YPIMClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		994585E621E4A4A800D3CC2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = LYP;
+				TargetAttributes = {
+					994585ED21E4A4A800D3CC2D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9945860121E4A4A900D3CC2D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 994585ED21E4A4A800D3CC2D;
+					};
+					9945860C21E4A4A900D3CC2D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 994585ED21E4A4A800D3CC2D;
+					};
+				};
+			};
+			buildConfigurationList = 994585E921E4A4A800D3CC2D /* Build configuration list for PBXProject "YPIMClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 994585E521E4A4A800D3CC2D;
+			productRefGroup = 994585EF21E4A4A800D3CC2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				994585ED21E4A4A800D3CC2D /* YPIMClient */,
+				9945860121E4A4A900D3CC2D /* YPIMClientTests */,
+				9945860C21E4A4A900D3CC2D /* YPIMClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		994585EC21E4A4A800D3CC2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994585FC21E4A4A900D3CC2D /* LaunchScreen.storyboard in Resources */,
+				994585F921E4A4A900D3CC2D /* Assets.xcassets in Resources */,
+				994585F721E4A4A800D3CC2D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9945860021E4A4A900D3CC2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9945860B21E4A4A900D3CC2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		082E62A4A82C186B0B114483 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YPIMClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23D5D65492F4418500D55640 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YPIMClient/Pods-YPIMClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ProtocolBuffers-Swift/ProtocolBuffers.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtocolBuffers.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YPIMClient/Pods-YPIMClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51CFE0E6BE1A1AE8D64DA123 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YPIMClientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BDA6FD6194CB9A09ECF0069 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YPIMClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		994585EA21E4A4A800D3CC2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9945862921E4A4D500D3CC2D /* ysocket.swift in Sources */,
+				994585F421E4A4A800D3CC2D /* ViewController.swift in Sources */,
+				994585F221E4A4A800D3CC2D /* AppDelegate.swift in Sources */,
+				9945862721E4A4D500D3CC2D /* yudpsocket.swift in Sources */,
+				9945862C21E4A64A00D3CC2D /* IMMessage.proto in Sources */,
+				9945863221E4A73300D3CC2D /* YPSocket.swift in Sources */,
+				9945862621E4A4D500D3CC2D /* yudpsocket.c in Sources */,
+				9945862A21E4A4D500D3CC2D /* ytcpsocket.swift in Sources */,
+				9945862821E4A4D500D3CC2D /* ytcpsocket.c in Sources */,
+				9945863021E4A70000D3CC2D /* Immessage.proto.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		994585FE21E4A4A900D3CC2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9945860721E4A4A900D3CC2D /* YPIMClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9945860921E4A4A900D3CC2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9945861221E4A4A900D3CC2D /* YPIMClientUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9945860421E4A4A900D3CC2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 994585ED21E4A4A800D3CC2D /* YPIMClient */;
+			targetProxy = 9945860321E4A4A900D3CC2D /* PBXContainerItemProxy */;
+		};
+		9945860F21E4A4A900D3CC2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 994585ED21E4A4A800D3CC2D /* YPIMClient */;
+			targetProxy = 9945860E21E4A4A900D3CC2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		994585F521E4A4A800D3CC2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				994585F621E4A4A800D3CC2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		994585FA21E4A4A900D3CC2D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				994585FB21E4A4A900D3CC2D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9945861421E4A4A900D3CC2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9945861521E4A4A900D3CC2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9945861721E4A4A900D3CC2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 047C6FE191E3BC2FC5E4F2FD /* Pods-YPIMClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = YPIMClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = animal.;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9945861821E4A4A900D3CC2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95FD46D678D8D08DA906CD48 /* Pods-YPIMClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = YPIMClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = animal.;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9945861A21E4A4A900D3CC2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67F07FF5EC7CB0502A7DD292 /* Pods-YPIMClientTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = YPIMClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = animal.YPIMClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YPIMClient.app/YPIMClient";
+			};
+			name = Debug;
+		};
+		9945861B21E4A4A900D3CC2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04710417470CEE6E1E99B770 /* Pods-YPIMClientTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = YPIMClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = animal.YPIMClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YPIMClient.app/YPIMClient";
+			};
+			name = Release;
+		};
+		9945861D21E4A4A900D3CC2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F210A19378479FEFE48F56B4 /* Pods-YPIMClientUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = YPIMClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = animal.YPIMClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YPIMClient;
+			};
+			name = Debug;
+		};
+		9945861E21E4A4A900D3CC2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE4B5468025E802A966339F9 /* Pods-YPIMClientUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = YPIMClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = animal.YPIMClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YPIMClient;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		994585E921E4A4A800D3CC2D /* Build configuration list for PBXProject "YPIMClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9945861421E4A4A900D3CC2D /* Debug */,
+				9945861521E4A4A900D3CC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9945861621E4A4A900D3CC2D /* Build configuration list for PBXNativeTarget "YPIMClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9945861721E4A4A900D3CC2D /* Debug */,
+				9945861821E4A4A900D3CC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9945861921E4A4A900D3CC2D /* Build configuration list for PBXNativeTarget "YPIMClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9945861A21E4A4A900D3CC2D /* Debug */,
+				9945861B21E4A4A900D3CC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9945861C21E4A4A900D3CC2D /* Build configuration list for PBXNativeTarget "YPIMClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9945861D21E4A4A900D3CC2D /* Debug */,
+				9945861E21E4A4A900D3CC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 994585E621E4A4A800D3CC2D /* Project object */;
+}

@@ -1,0 +1,34 @@
+#算法
+##不使用乘法和除法，求一个数的平方
+####解法 1：
+a^2 = a * a, 相当于a个a相加
+
+```
+int findSquare(int a){
+    a = abs(a);
+   int sqr = a;
+    for (int i = 0; i<a-1; i++) {
+        sqr = sqr + a;
+    }
+    return sqr;
+}
+```
+####解法 2：
+1^2 = 1;   
+2^2 = 1 + 3 = 4;  
+3^2 = 1 + 3 + 5 = 9;  
+4^2 = 1 + 3 + 5 + 7 = 16;
+不知道各位发现规律了没有，数m的平方等于m个奇数相加
+
+```
+int findSquare2(int a){
+    a = abs(a);
+   int b = 1;
+   int sqr = 0;
+    for (int i = 0; i<a; i++) {
+        sqr = sqr + b;
+        b = b + 2;
+    }
+    return sqr;
+}
+```

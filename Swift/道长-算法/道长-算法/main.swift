@@ -1,0 +1,154 @@
+//
+//  main.swift
+//  道长-算法
+//
+//  Created by 赖永鹏 on 2019/4/16.
+//  Copyright © 2019年 LYP. All rights reserved.
+//
+
+// 面试中常问的几个算法题：
+/*
+// 数组
+ (1) 在一个元素为 1 到 100 的整数数组中，如何搜索缺失元素?
+ (2) 给定一个数组，如何搜索重复元素?
+ (3) 给定一个乱序数组，如何搜索最大和最小元素?
+ (4) 给定一个数值，如何搜索整数数组中加和为该数值的成对元素?
+ (5) 如果数组包含多个重复值，如何搜索所有重复值?
+ (6) 给定一个数组，如何用 Java 删除重复元素?如何在不使用库的情况下移除数组中的重复元素?
+ (7) 如何使用快速排序算法对整数数组进行排序?
+ (8) 如何使用 Java 反转一个数组?
+ 
+// 链表
+ (9) 如何在一次传递中找到单链表的中间元素?
+ (10) 如何检查给定的链表是否包含循环?如何找到循环的起始节点?
+ (11) 如何反转链表?
+ (12) 在没有递归的情况下如何反转单链表?
+ (13) 如何删除乱序链表中的重复节点?
+ (14) 如何测量单链表的长度?
+ (15) 如何从单链表的末端找出第三个节点?
+ (16) 如何使用堆栈算出两个链表的总和?
+ 
+// 字符串
+ (17) 如何打印字符串中重复的字符?
+ (18) 如何检查两个字符串是否互为逆序?
+ (19) 如何打印字符串中首个非重复字符?
+ (20) 如何使用递归反转给定字符串?
+ (21) 如何检查一个字符串是否仅包含数字?
+ (22) 如何搜索字符串中的重复字符?
+ (23) 给定一个字符串，如何统计元音数和辅音数?
+ (24) 给定一个字符，如同计算它在字符串中出现的次数?
+ (25) 如何搜索一个字符串的所有排列情况?
+ (26) 在不使用任何库的情况下，如何反转给定句子中的单词?
+ (27) 如何检查两个字符串是不是互为旋转(rotation)?
+ (28) 给定一个字符串，如何检查它是不是回文结构?
+ 
+// 树
+ (29) 如何实现二叉搜索树?
+ (30) 如何对给定二叉树执行前序遍历?
+ (31) 如何在没有递归的情况下对给定二叉树执行前序遍历?
+ (32) 如何对给定二叉树执行中序遍历?
+ (33) 如何在没有递归的情况下通过对给定二叉树执行中序遍历来打印所有节点?
+ (34) 如何实现后序遍历算法?
+ (35) 如何在没有递归的情况下对给定二叉树执行后序遍历?
+ (36) 如何打印二叉搜索树的所有叶节点?
+ (37) 如何计算给定二叉树中叶节点的数量?
+ (38) 如何在给定数组中执行二元搜索?
+ 
+// 其他题
+ (39) 如何实现冒泡排序算法(bubble sort algorithm)?
+ (40) 如何实现迭代快速排序算法(iterative quicksort algorithm)?
+ (41) 如何实现插入排序算法(insertion sort algorithm)?
+ (42) 如何实现归并排序算法(merge sort algorithm)?
+ (43) 如何实现桶排序算法(bucket sort algorithm)?
+ (44) 如何实现计数排序算法(counting sort algorithm)?
+ (45) 如何实现基数排序算法(radix sort algorithm)?
+ (46) 如何在不使用第三个变量的前提下交换两个数字?
+ (47) 如何确认两个矩形是否重叠?
+ (48) 如何设计自动贩卖机?
+ */
+
+import Foundation
+
+ let nums = [-1,1,2,2,0]
+ var dic : SetAndDict = SetAndDict()
+ let arr = dic.twoNum2(nums, 1)
+// print(arr)
+
+var char = "the sky is blue"
+var stringTool: StringTool = StringTool()
+let str = stringTool.reverseWords(str: char)
+//print(str!)
+
+let list: List = List()
+list.appendTail(1)
+list.appendTail(2)
+list.appendTail(4)
+list.appendTail(5)
+list.appendTail(2)
+list.appendTail(1)
+
+//list.printList(list.head)
+
+let dummy: Dunmy = Dunmy()
+let node = dummy.partition(list.head, 3)
+//list.printList(node)
+
+let deleteNode = dummy.deleteEelments(node, 5)
+//list.printList(deleteNode)
+
+
+let stackPath: StackPath = StackPath()
+
+let path = stackPath.simplePath("/a/./b/../../c/")
+//print("path =" + path)
+
+let o_2tool:O_2Tool = O_2Tool()
+
+let arrSort = [4,6,5,2,1,3,7,9,8]
+
+//print(o_2tool.bubbleSort(arrSort))
+//print(o_2tool.selectSort(arrSort))
+//print(o_2tool.insertSort(arrSort))
+let nums1 = [1,1,3]
+let leetc: leetcode = leetcode()
+//print(leetc.powerOfThree(27))
+//print(leetc.permuta(nums1))
+//print(leetc.permuta(nums1))
+//print(leetc.isPerfectSquare3(1))
+let threSum = [-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6]
+//print(leetc.threeSum(threSum))
+
+//print(leetc.permutation(nums1))
+
+let list2: List = List()
+list2.appendTail(1)
+list2.appendTail(2)
+list2.appendTail(3)
+list2.appendTail(4)
+list2.appendTail(5)
+list2.appendTail(6)
+
+var listN:ListNode?
+//listN = leetc.reverseTwo(list2.head)
+listN = leetc.reverseTwo2(list2.head)
+//list.printList(listN)
+
+//print(leetc.climbingStairs(4))
+
+let nums2 = [10, 15, 20]
+//print(leetc.minCostClimbingStairs2(nums2))
+
+//print(leetc.topKFrequentE([4,1,-1,2,-1,2,3], 2))
+
+//print(leetc.binarySearch([-1,0,3,5,9,12], 9))
+//[-4,-3]
+//print(leetc.maxiNumProductSubarray([0,-2,3]))
+
+//print(leetc.coinChange([1, 2, 5], 11))
+
+//print(leetc.maxProfitTwo([3,3,5,0,0,3,1,4]))
+
+//let leCtree = LeetCodeTree()
+//let letNodeT = TreeNodeTool()
+//let inNode = letNodeT.creatTree([9,3,15,20,7])
+//let postNode = letNodeT.creatTree([9,15,7,20,3])

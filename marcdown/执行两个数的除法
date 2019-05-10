@@ -1,0 +1,29 @@
+#算法
+##不使用除法运算符，执行两个数的除法
+
+
+乘法可以用加法，除法就用减法。x/y 让x一直减y，当余数小于y的时候，减的次数就是商
+
+```
+int divide(int a,int b){
+    if(b == 0){
+        NSLog(@"error");
+        exit(1);
+    }
+//   判断符号
+    int sign = 1;
+    if (a*b<1) {
+        sign = -1;
+    }
+    int number = 0;
+    int x = abs(a);
+    int y = abs(b);
+    while (x >= y) {
+        x = x - y;
+        number++;
+    }
+    NSLog(@"remainder is %d",x);
+    return sign * number;
+}
+
+```

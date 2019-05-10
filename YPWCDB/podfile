@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'YPWCDB' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for YPWCDB
+pod 'WCDB', '~> 1.0.7.5'
+  target 'YPWCDBTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'YPWCDBUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

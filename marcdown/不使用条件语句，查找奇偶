@@ -1,0 +1,23 @@
+#算法
+##不使用任何条件语句查找数字是奇数还是偶数
+####解法 1：
+
+```
+char *judgeParity(int a){
+    
+    return (a&1)?("odd"):("even");
+}
+```
+####解法 2：
+```
+char *judgeParity2(int a){
+    return (a%2)?("odd"):("even");
+}
+```
+####解法 3：
+```
+char *judgeParity3(int a){
+    char *str[] = {"odd","even"};
+    return str[a%2];
+}
+```

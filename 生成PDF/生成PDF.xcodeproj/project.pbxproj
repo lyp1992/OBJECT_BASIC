@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7488CF12112A61F0080C845 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7488CF02112A61F0080C845 /* AppDelegate.m */; };
+		D7488CF42112A61F0080C845 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7488CF32112A61F0080C845 /* ViewController.m */; };
+		D7488CF72112A61F0080C845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7488CF52112A61F0080C845 /* Main.storyboard */; };
+		D7488CF92112A61F0080C845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7488CF82112A61F0080C845 /* Assets.xcassets */; };
+		D7488CFC2112A61F0080C845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7488CFA2112A61F0080C845 /* LaunchScreen.storyboard */; };
+		D7488CFF2112A61F0080C845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7488CFE2112A61F0080C845 /* main.m */; };
+		D7488D092112A61F0080C845 /* __PDFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7488D082112A61F0080C845 /* __PDFTests.m */; };
+		D7488D142112A61F0080C845 /* __PDFUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7488D132112A61F0080C845 /* __PDFUITests.m */; };
+		D7488D232112A63A0080C845 /* CreatePdfView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7488D222112A63A0080C845 /* CreatePdfView.m */; };
+		D7488D262112A65E0080C845 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7488D252112A65E0080C845 /* CoreText.framework */; };
+		D7488D2F2112DFCB0080C845 /* ScratchPdfTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D7488D2E2112DFCA0080C845 /* ScratchPdfTool.m */; };
+		D7488D322112E0120080C845 /* MD5Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = D7488D302112E0120080C845 /* MD5Encryption.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7488D052112A61F0080C845 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7488CE42112A61F0080C845 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7488CEB2112A61F0080C845;
+			remoteInfo = "生成PDF";
+		};
+		D7488D102112A61F0080C845 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7488CE42112A61F0080C845 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7488CEB2112A61F0080C845;
+			remoteInfo = "生成PDF";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D7488CEC2112A61F0080C845 /* 生成PDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "生成PDF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7488CEF2112A61F0080C845 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D7488CF02112A61F0080C845 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7488CF22112A61F0080C845 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D7488CF32112A61F0080C845 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D7488CF62112A61F0080C845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7488CF82112A61F0080C845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7488CFB2112A61F0080C845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7488CFD2112A61F0080C845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7488CFE2112A61F0080C845 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7488D042112A61F0080C845 /* 生成PDFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "生成PDFTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7488D082112A61F0080C845 /* __PDFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __PDFTests.m; sourceTree = "<group>"; };
+		D7488D0A2112A61F0080C845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7488D0F2112A61F0080C845 /* 生成PDFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "生成PDFUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7488D132112A61F0080C845 /* __PDFUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __PDFUITests.m; sourceTree = "<group>"; };
+		D7488D152112A61F0080C845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7488D212112A63A0080C845 /* CreatePdfView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatePdfView.h; sourceTree = "<group>"; };
+		D7488D222112A63A0080C845 /* CreatePdfView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreatePdfView.m; sourceTree = "<group>"; };
+		D7488D252112A65E0080C845 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		D7488D2D2112DFCA0080C845 /* ScratchPdfTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScratchPdfTool.h; sourceTree = "<group>"; };
+		D7488D2E2112DFCA0080C845 /* ScratchPdfTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScratchPdfTool.m; sourceTree = "<group>"; };
+		D7488D302112E0120080C845 /* MD5Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Encryption.m; sourceTree = "<group>"; };
+		D7488D312112E0120080C845 /* MD5Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Encryption.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7488CE92112A61F0080C845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7488D262112A65E0080C845 /* CoreText.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7488D012112A61F0080C845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7488D0C2112A61F0080C845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7488CE32112A61F0080C845 = {
+			isa = PBXGroup;
+			children = (
+				D7488CEE2112A61F0080C845 /* 生成PDF */,
+				D7488D072112A61F0080C845 /* 生成PDFTests */,
+				D7488D122112A61F0080C845 /* 生成PDFUITests */,
+				D7488CED2112A61F0080C845 /* Products */,
+				D7488D242112A65D0080C845 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D7488CED2112A61F0080C845 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7488CEC2112A61F0080C845 /* 生成PDF.app */,
+				D7488D042112A61F0080C845 /* 生成PDFTests.xctest */,
+				D7488D0F2112A61F0080C845 /* 生成PDFUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7488CEE2112A61F0080C845 /* 生成PDF */ = {
+			isa = PBXGroup;
+			children = (
+				D7488D312112E0120080C845 /* MD5Encryption.h */,
+				D7488D302112E0120080C845 /* MD5Encryption.m */,
+				D7488D2D2112DFCA0080C845 /* ScratchPdfTool.h */,
+				D7488D2E2112DFCA0080C845 /* ScratchPdfTool.m */,
+				D7488CEF2112A61F0080C845 /* AppDelegate.h */,
+				D7488CF02112A61F0080C845 /* AppDelegate.m */,
+				D7488CF22112A61F0080C845 /* ViewController.h */,
+				D7488CF32112A61F0080C845 /* ViewController.m */,
+				D7488D212112A63A0080C845 /* CreatePdfView.h */,
+				D7488D222112A63A0080C845 /* CreatePdfView.m */,
+				D7488CF52112A61F0080C845 /* Main.storyboard */,
+				D7488CF82112A61F0080C845 /* Assets.xcassets */,
+				D7488CFA2112A61F0080C845 /* LaunchScreen.storyboard */,
+				D7488CFD2112A61F0080C845 /* Info.plist */,
+				D7488CFE2112A61F0080C845 /* main.m */,
+			);
+			path = "生成PDF";
+			sourceTree = "<group>";
+		};
+		D7488D072112A61F0080C845 /* 生成PDFTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7488D082112A61F0080C845 /* __PDFTests.m */,
+				D7488D0A2112A61F0080C845 /* Info.plist */,
+			);
+			path = "生成PDFTests";
+			sourceTree = "<group>";
+		};
+		D7488D122112A61F0080C845 /* 生成PDFUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7488D132112A61F0080C845 /* __PDFUITests.m */,
+				D7488D152112A61F0080C845 /* Info.plist */,
+			);
+			path = "生成PDFUITests";
+			sourceTree = "<group>";
+		};
+		D7488D242112A65D0080C845 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7488D252112A65E0080C845 /* CoreText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7488CEB2112A61F0080C845 /* 生成PDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7488D182112A61F0080C845 /* Build configuration list for PBXNativeTarget "生成PDF" */;
+			buildPhases = (
+				D7488CE82112A61F0080C845 /* Sources */,
+				D7488CE92112A61F0080C845 /* Frameworks */,
+				D7488CEA2112A61F0080C845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "生成PDF";
+			productName = "生成PDF";
+			productReference = D7488CEC2112A61F0080C845 /* 生成PDF.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7488D032112A61F0080C845 /* 生成PDFTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7488D1B2112A61F0080C845 /* Build configuration list for PBXNativeTarget "生成PDFTests" */;
+			buildPhases = (
+				D7488D002112A61F0080C845 /* Sources */,
+				D7488D012112A61F0080C845 /* Frameworks */,
+				D7488D022112A61F0080C845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7488D062112A61F0080C845 /* PBXTargetDependency */,
+			);
+			name = "生成PDFTests";
+			productName = "生成PDFTests";
+			productReference = D7488D042112A61F0080C845 /* 生成PDFTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7488D0E2112A61F0080C845 /* 生成PDFUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7488D1E2112A61F0080C845 /* Build configuration list for PBXNativeTarget "生成PDFUITests" */;
+			buildPhases = (
+				D7488D0B2112A61F0080C845 /* Sources */,
+				D7488D0C2112A61F0080C845 /* Frameworks */,
+				D7488D0D2112A61F0080C845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7488D112112A61F0080C845 /* PBXTargetDependency */,
+			);
+			name = "生成PDFUITests";
+			productName = "生成PDFUITests";
+			productReference = D7488D0F2112A61F0080C845 /* 生成PDFUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7488CE42112A61F0080C845 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = laiyongpeng;
+				TargetAttributes = {
+					D7488CEB2112A61F0080C845 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D7488D032112A61F0080C845 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D7488CEB2112A61F0080C845;
+					};
+					D7488D0E2112A61F0080C845 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D7488CEB2112A61F0080C845;
+					};
+				};
+			};
+			buildConfigurationList = D7488CE72112A61F0080C845 /* Build configuration list for PBXProject "生成PDF" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7488CE32112A61F0080C845;
+			productRefGroup = D7488CED2112A61F0080C845 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7488CEB2112A61F0080C845 /* 生成PDF */,
+				D7488D032112A61F0080C845 /* 生成PDFTests */,
+				D7488D0E2112A61F0080C845 /* 生成PDFUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7488CEA2112A61F0080C845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7488CFC2112A61F0080C845 /* LaunchScreen.storyboard in Resources */,
+				D7488CF92112A61F0080C845 /* Assets.xcassets in Resources */,
+				D7488CF72112A61F0080C845 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7488D022112A61F0080C845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7488D0D2112A61F0080C845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7488CE82112A61F0080C845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7488CF42112A61F0080C845 /* ViewController.m in Sources */,
+				D7488D322112E0120080C845 /* MD5Encryption.m in Sources */,
+				D7488CFF2112A61F0080C845 /* main.m in Sources */,
+				D7488CF12112A61F0080C845 /* AppDelegate.m in Sources */,
+				D7488D232112A63A0080C845 /* CreatePdfView.m in Sources */,
+				D7488D2F2112DFCB0080C845 /* ScratchPdfTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7488D002112A61F0080C845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7488D092112A61F0080C845 /* __PDFTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7488D0B2112A61F0080C845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7488D142112A61F0080C845 /* __PDFUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7488D062112A61F0080C845 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7488CEB2112A61F0080C845 /* 生成PDF */;
+			targetProxy = D7488D052112A61F0080C845 /* PBXContainerItemProxy */;
+		};
+		D7488D112112A61F0080C845 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7488CEB2112A61F0080C845 /* 生成PDF */;
+			targetProxy = D7488D102112A61F0080C845 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7488CF52112A61F0080C845 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7488CF62112A61F0080C845 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7488CFA2112A61F0080C845 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7488CFB2112A61F0080C845 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7488D162112A61F0080C845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D7488D172112A61F0080C845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7488D192112A61F0080C845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "生成PDF/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.--PDF";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7488D1A2112A61F0080C845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "生成PDF/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.--PDF";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7488D1C2112A61F0080C845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "生成PDFTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.--PDFTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/生成PDF.app/生成PDF";
+			};
+			name = Debug;
+		};
+		D7488D1D2112A61F0080C845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "生成PDFTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.--PDFTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/生成PDF.app/生成PDF";
+			};
+			name = Release;
+		};
+		D7488D1F2112A61F0080C845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "生成PDFUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.--PDFUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "生成PDF";
+			};
+			name = Debug;
+		};
+		D7488D202112A61F0080C845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "生成PDFUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.--PDFUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "生成PDF";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7488CE72112A61F0080C845 /* Build configuration list for PBXProject "生成PDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7488D162112A61F0080C845 /* Debug */,
+				D7488D172112A61F0080C845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7488D182112A61F0080C845 /* Build configuration list for PBXNativeTarget "生成PDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7488D192112A61F0080C845 /* Debug */,
+				D7488D1A2112A61F0080C845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7488D1B2112A61F0080C845 /* Build configuration list for PBXNativeTarget "生成PDFTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7488D1C2112A61F0080C845 /* Debug */,
+				D7488D1D2112A61F0080C845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7488D1E2112A61F0080C845 /* Build configuration list for PBXNativeTarget "生成PDFUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7488D1F2112A61F0080C845 /* Debug */,
+				D7488D202112A61F0080C845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7488CE42112A61F0080C845 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods__________ {
+  umbrella header "Pods-面向协议-请求数据-umbrella.h"
+
+  export *
+  module * { export * }
+}

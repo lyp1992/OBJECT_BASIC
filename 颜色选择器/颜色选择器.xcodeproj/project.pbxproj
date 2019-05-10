@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D734BDD1212A5F73000F5171 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D734BDD0212A5F73000F5171 /* SliderView.m */; };
+		D734BDD4212AA824000F5171 /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D734BDD2212AA823000F5171 /* UIView+ColorOfPoint.m */; };
+		D734BDE9212ABA7C000F5171 /* BarColorPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D734BDE7212ABA7C000F5171 /* BarColorPanel.m */; };
+		D734BDEA212ABA7C000F5171 /* SliderColorPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D734BDE8212ABA7C000F5171 /* SliderColorPanel.m */; };
+		D766BA582121319B00E78B33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA572121319B00E78B33 /* AppDelegate.m */; };
+		D766BA5B2121319B00E78B33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA5A2121319B00E78B33 /* ViewController.m */; };
+		D766BA5E2121319B00E78B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D766BA5C2121319B00E78B33 /* Main.storyboard */; };
+		D766BA602121319B00E78B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D766BA5F2121319B00E78B33 /* Assets.xcassets */; };
+		D766BA632121319B00E78B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D766BA612121319B00E78B33 /* LaunchScreen.storyboard */; };
+		D766BA662121319B00E78B33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA652121319B00E78B33 /* main.m */; };
+		D766BA702121319B00E78B33 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA6F2121319B00E78B33 /* _____Tests.m */; };
+		D766BA7B2121319B00E78B33 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA7A2121319B00E78B33 /* _____UITests.m */; };
+		D766BA9F212131BD00E78B33 /* MSColorComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA8A212131BC00E78B33 /* MSColorComponentView.m */; };
+		D766BAA0212131BD00E78B33 /* MSColorSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA8D212131BC00E78B33 /* MSColorSelectionView.m */; };
+		D766BAA2212131BD00E78B33 /* MSColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA91212131BC00E78B33 /* MSColorUtils.m */; };
+		D766BAA3212131BD00E78B33 /* MSColorWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA94212131BC00E78B33 /* MSColorWheelView.m */; };
+		D766BAA4212131BD00E78B33 /* MSHSBView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA96212131BC00E78B33 /* MSHSBView.m */; };
+		D766BAA5212131BD00E78B33 /* MSRGBView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA98212131BC00E78B33 /* MSRGBView.m */; };
+		D766BAA6212131BD00E78B33 /* MSSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA9A212131BC00E78B33 /* MSSliderView.m */; };
+		D766BAA7212131BD00E78B33 /* MSThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA9C212131BC00E78B33 /* MSThumbView.m */; };
+		D766BAA8212131BD00E78B33 /* UIControl+HitTestEdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BA9E212131BC00E78B33 /* UIControl+HitTestEdgeInsets.m */; };
+		D766BAAB212133D500E78B33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D766BAAA212133D500E78B33 /* CoreGraphics.framework */; };
+		D766BAB02121366A00E78B33 /* palette.png in Resources */ = {isa = PBXBuildFile; fileRef = D766BAAD2121366A00E78B33 /* palette.png */; };
+		D766BAB12121366A00E78B33 /* WSColorImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BAAF2121366A00E78B33 /* WSColorImageView.m */; };
+		D766BACF2121709600E78B33 /* DrawColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D766BACE2121709600E78B33 /* DrawColorView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D766BA6C2121319B00E78B33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D766BA4B2121319B00E78B33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D766BA522121319B00E78B33;
+			remoteInfo = "颜色选择器";
+		};
+		D766BA772121319B00E78B33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D766BA4B2121319B00E78B33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D766BA522121319B00E78B33;
+			remoteInfo = "颜色选择器";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D734BDCF212A5F73000F5171 /* SliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		D734BDD0212A5F73000F5171 /* SliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
+		D734BDD2212AA823000F5171 /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ColorOfPoint.m"; sourceTree = "<group>"; };
+		D734BDD3212AA824000F5171 /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ColorOfPoint.h"; sourceTree = "<group>"; };
+		D734BDE5212ABA7B000F5171 /* BarColorPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarColorPanel.h; sourceTree = "<group>"; };
+		D734BDE6212ABA7C000F5171 /* SliderColorPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderColorPanel.h; sourceTree = "<group>"; };
+		D734BDE7212ABA7C000F5171 /* BarColorPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarColorPanel.m; sourceTree = "<group>"; };
+		D734BDE8212ABA7C000F5171 /* SliderColorPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderColorPanel.m; sourceTree = "<group>"; };
+		D766BA532121319B00E78B33 /* 颜色选择器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "颜色选择器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D766BA562121319B00E78B33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D766BA572121319B00E78B33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D766BA592121319B00E78B33 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D766BA5A2121319B00E78B33 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D766BA5D2121319B00E78B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D766BA5F2121319B00E78B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D766BA622121319B00E78B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D766BA642121319B00E78B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D766BA652121319B00E78B33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D766BA6B2121319B00E78B33 /* 颜色选择器Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "颜色选择器Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D766BA6F2121319B00E78B33 /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
+		D766BA712121319B00E78B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D766BA762121319B00E78B33 /* 颜色选择器UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "颜色选择器UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D766BA7A2121319B00E78B33 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
+		D766BA7C2121319B00E78B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D766BA89212131BC00E78B33 /* MSColorComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorComponentView.h; sourceTree = "<group>"; };
+		D766BA8A212131BC00E78B33 /* MSColorComponentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorComponentView.m; sourceTree = "<group>"; };
+		D766BA8B212131BC00E78B33 /* MSColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorPicker.h; sourceTree = "<group>"; };
+		D766BA8C212131BC00E78B33 /* MSColorSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorSelectionView.h; sourceTree = "<group>"; };
+		D766BA8D212131BC00E78B33 /* MSColorSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorSelectionView.m; sourceTree = "<group>"; };
+		D766BA90212131BC00E78B33 /* MSColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorUtils.h; sourceTree = "<group>"; };
+		D766BA91212131BC00E78B33 /* MSColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorUtils.m; sourceTree = "<group>"; };
+		D766BA92212131BC00E78B33 /* MSColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorView.h; sourceTree = "<group>"; };
+		D766BA93212131BC00E78B33 /* MSColorWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSColorWheelView.h; sourceTree = "<group>"; };
+		D766BA94212131BC00E78B33 /* MSColorWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSColorWheelView.m; sourceTree = "<group>"; };
+		D766BA95212131BC00E78B33 /* MSHSBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHSBView.h; sourceTree = "<group>"; };
+		D766BA96212131BC00E78B33 /* MSHSBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHSBView.m; sourceTree = "<group>"; };
+		D766BA97212131BC00E78B33 /* MSRGBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRGBView.h; sourceTree = "<group>"; };
+		D766BA98212131BC00E78B33 /* MSRGBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRGBView.m; sourceTree = "<group>"; };
+		D766BA99212131BC00E78B33 /* MSSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSliderView.h; sourceTree = "<group>"; };
+		D766BA9A212131BC00E78B33 /* MSSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSliderView.m; sourceTree = "<group>"; };
+		D766BA9B212131BC00E78B33 /* MSThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSThumbView.h; sourceTree = "<group>"; };
+		D766BA9C212131BC00E78B33 /* MSThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSThumbView.m; sourceTree = "<group>"; };
+		D766BA9D212131BC00E78B33 /* UIControl+HitTestEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+HitTestEdgeInsets.h"; sourceTree = "<group>"; };
+		D766BA9E212131BC00E78B33 /* UIControl+HitTestEdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+HitTestEdgeInsets.m"; sourceTree = "<group>"; };
+		D766BAAA212133D500E78B33 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D766BAAD2121366A00E78B33 /* palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palette.png; sourceTree = "<group>"; };
+		D766BAAE2121366A00E78B33 /* WSColorImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSColorImageView.h; sourceTree = "<group>"; };
+		D766BAAF2121366A00E78B33 /* WSColorImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSColorImageView.m; sourceTree = "<group>"; };
+		D766BACD2121709600E78B33 /* DrawColorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawColorView.h; sourceTree = "<group>"; };
+		D766BACE2121709600E78B33 /* DrawColorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawColorView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D766BA502121319B00E78B33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D766BAAB212133D500E78B33 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D766BA682121319B00E78B33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D766BA732121319B00E78B33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D766BA4A2121319B00E78B33 = {
+			isa = PBXGroup;
+			children = (
+				D766BA552121319B00E78B33 /* 颜色选择器 */,
+				D766BA6E2121319B00E78B33 /* 颜色选择器Tests */,
+				D766BA792121319B00E78B33 /* 颜色选择器UITests */,
+				D766BA542121319B00E78B33 /* Products */,
+				D766BAA9212133D400E78B33 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D766BA542121319B00E78B33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D766BA532121319B00E78B33 /* 颜色选择器.app */,
+				D766BA6B2121319B00E78B33 /* 颜色选择器Tests.xctest */,
+				D766BA762121319B00E78B33 /* 颜色选择器UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D766BA552121319B00E78B33 /* 颜色选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				D766BAAC2121365200E78B33 /* ColorPicker */,
+				D766BA88212131BC00E78B33 /* MSColorPicker */,
+				D766BA562121319B00E78B33 /* AppDelegate.h */,
+				D766BA572121319B00E78B33 /* AppDelegate.m */,
+				D766BA592121319B00E78B33 /* ViewController.h */,
+				D766BA5A2121319B00E78B33 /* ViewController.m */,
+				D766BACD2121709600E78B33 /* DrawColorView.h */,
+				D766BACE2121709600E78B33 /* DrawColorView.m */,
+				D734BDCF212A5F73000F5171 /* SliderView.h */,
+				D734BDD0212A5F73000F5171 /* SliderView.m */,
+				D766BA5C2121319B00E78B33 /* Main.storyboard */,
+				D766BA5F2121319B00E78B33 /* Assets.xcassets */,
+				D766BA612121319B00E78B33 /* LaunchScreen.storyboard */,
+				D766BA642121319B00E78B33 /* Info.plist */,
+				D766BA652121319B00E78B33 /* main.m */,
+			);
+			path = "颜色选择器";
+			sourceTree = "<group>";
+		};
+		D766BA6E2121319B00E78B33 /* 颜色选择器Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D766BA6F2121319B00E78B33 /* _____Tests.m */,
+				D766BA712121319B00E78B33 /* Info.plist */,
+			);
+			path = "颜色选择器Tests";
+			sourceTree = "<group>";
+		};
+		D766BA792121319B00E78B33 /* 颜色选择器UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D766BA7A2121319B00E78B33 /* _____UITests.m */,
+				D766BA7C2121319B00E78B33 /* Info.plist */,
+			);
+			path = "颜色选择器UITests";
+			sourceTree = "<group>";
+		};
+		D766BA88212131BC00E78B33 /* MSColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				D766BA89212131BC00E78B33 /* MSColorComponentView.h */,
+				D766BA8A212131BC00E78B33 /* MSColorComponentView.m */,
+				D766BA8B212131BC00E78B33 /* MSColorPicker.h */,
+				D766BA8C212131BC00E78B33 /* MSColorSelectionView.h */,
+				D766BA8D212131BC00E78B33 /* MSColorSelectionView.m */,
+				D766BA90212131BC00E78B33 /* MSColorUtils.h */,
+				D766BA91212131BC00E78B33 /* MSColorUtils.m */,
+				D766BA92212131BC00E78B33 /* MSColorView.h */,
+				D766BA93212131BC00E78B33 /* MSColorWheelView.h */,
+				D766BA94212131BC00E78B33 /* MSColorWheelView.m */,
+				D766BA95212131BC00E78B33 /* MSHSBView.h */,
+				D766BA96212131BC00E78B33 /* MSHSBView.m */,
+				D766BA97212131BC00E78B33 /* MSRGBView.h */,
+				D766BA98212131BC00E78B33 /* MSRGBView.m */,
+				D766BA99212131BC00E78B33 /* MSSliderView.h */,
+				D766BA9A212131BC00E78B33 /* MSSliderView.m */,
+				D766BA9B212131BC00E78B33 /* MSThumbView.h */,
+				D766BA9C212131BC00E78B33 /* MSThumbView.m */,
+				D766BA9D212131BC00E78B33 /* UIControl+HitTestEdgeInsets.h */,
+				D766BA9E212131BC00E78B33 /* UIControl+HitTestEdgeInsets.m */,
+			);
+			path = MSColorPicker;
+			sourceTree = "<group>";
+		};
+		D766BAA9212133D400E78B33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D766BAAA212133D500E78B33 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D766BAAC2121365200E78B33 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				D734BDE5212ABA7B000F5171 /* BarColorPanel.h */,
+				D734BDE7212ABA7C000F5171 /* BarColorPanel.m */,
+				D734BDE6212ABA7C000F5171 /* SliderColorPanel.h */,
+				D734BDE8212ABA7C000F5171 /* SliderColorPanel.m */,
+				D734BDD3212AA824000F5171 /* UIView+ColorOfPoint.h */,
+				D734BDD2212AA823000F5171 /* UIView+ColorOfPoint.m */,
+				D766BAAE2121366A00E78B33 /* WSColorImageView.h */,
+				D766BAAF2121366A00E78B33 /* WSColorImageView.m */,
+				D766BAAD2121366A00E78B33 /* palette.png */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D766BA522121319B00E78B33 /* 颜色选择器 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D766BA7F2121319B00E78B33 /* Build configuration list for PBXNativeTarget "颜色选择器" */;
+			buildPhases = (
+				D766BA4F2121319B00E78B33 /* Sources */,
+				D766BA502121319B00E78B33 /* Frameworks */,
+				D766BA512121319B00E78B33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "颜色选择器";
+			productName = "颜色选择器";
+			productReference = D766BA532121319B00E78B33 /* 颜色选择器.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D766BA6A2121319B00E78B33 /* 颜色选择器Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D766BA822121319B00E78B33 /* Build configuration list for PBXNativeTarget "颜色选择器Tests" */;
+			buildPhases = (
+				D766BA672121319B00E78B33 /* Sources */,
+				D766BA682121319B00E78B33 /* Frameworks */,
+				D766BA692121319B00E78B33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D766BA6D2121319B00E78B33 /* PBXTargetDependency */,
+			);
+			name = "颜色选择器Tests";
+			productName = "颜色选择器Tests";
+			productReference = D766BA6B2121319B00E78B33 /* 颜色选择器Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D766BA752121319B00E78B33 /* 颜色选择器UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D766BA852121319B00E78B33 /* Build configuration list for PBXNativeTarget "颜色选择器UITests" */;
+			buildPhases = (
+				D766BA722121319B00E78B33 /* Sources */,
+				D766BA732121319B00E78B33 /* Frameworks */,
+				D766BA742121319B00E78B33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D766BA782121319B00E78B33 /* PBXTargetDependency */,
+			);
+			name = "颜色选择器UITests";
+			productName = "颜色选择器UITests";
+			productReference = D766BA762121319B00E78B33 /* 颜色选择器UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D766BA4B2121319B00E78B33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = laiyongpeng;
+				TargetAttributes = {
+					D766BA522121319B00E78B33 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D766BA6A2121319B00E78B33 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D766BA522121319B00E78B33;
+					};
+					D766BA752121319B00E78B33 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D766BA522121319B00E78B33;
+					};
+				};
+			};
+			buildConfigurationList = D766BA4E2121319B00E78B33 /* Build configuration list for PBXProject "颜色选择器" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D766BA4A2121319B00E78B33;
+			productRefGroup = D766BA542121319B00E78B33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D766BA522121319B00E78B33 /* 颜色选择器 */,
+				D766BA6A2121319B00E78B33 /* 颜色选择器Tests */,
+				D766BA752121319B00E78B33 /* 颜色选择器UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D766BA512121319B00E78B33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D766BA632121319B00E78B33 /* LaunchScreen.storyboard in Resources */,
+				D766BAB02121366A00E78B33 /* palette.png in Resources */,
+				D766BA602121319B00E78B33 /* Assets.xcassets in Resources */,
+				D766BA5E2121319B00E78B33 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D766BA692121319B00E78B33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D766BA742121319B00E78B33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D766BA4F2121319B00E78B33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D734BDE9212ABA7C000F5171 /* BarColorPanel.m in Sources */,
+				D766BAA0212131BD00E78B33 /* MSColorSelectionView.m in Sources */,
+				D766BA5B2121319B00E78B33 /* ViewController.m in Sources */,
+				D734BDD4212AA824000F5171 /* UIView+ColorOfPoint.m in Sources */,
+				D766BAB12121366A00E78B33 /* WSColorImageView.m in Sources */,
+				D766BAA2212131BD00E78B33 /* MSColorUtils.m in Sources */,
+				D766BAA7212131BD00E78B33 /* MSThumbView.m in Sources */,
+				D766BAA5212131BD00E78B33 /* MSRGBView.m in Sources */,
+				D766BAA3212131BD00E78B33 /* MSColorWheelView.m in Sources */,
+				D766BAA8212131BD00E78B33 /* UIControl+HitTestEdgeInsets.m in Sources */,
+				D766BAA4212131BD00E78B33 /* MSHSBView.m in Sources */,
+				D734BDEA212ABA7C000F5171 /* SliderColorPanel.m in Sources */,
+				D766BA662121319B00E78B33 /* main.m in Sources */,
+				D734BDD1212A5F73000F5171 /* SliderView.m in Sources */,
+				D766BACF2121709600E78B33 /* DrawColorView.m in Sources */,
+				D766BA9F212131BD00E78B33 /* MSColorComponentView.m in Sources */,
+				D766BA582121319B00E78B33 /* AppDelegate.m in Sources */,
+				D766BAA6212131BD00E78B33 /* MSSliderView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D766BA672121319B00E78B33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D766BA702121319B00E78B33 /* _____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D766BA722121319B00E78B33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D766BA7B2121319B00E78B33 /* _____UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D766BA6D2121319B00E78B33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D766BA522121319B00E78B33 /* 颜色选择器 */;
+			targetProxy = D766BA6C2121319B00E78B33 /* PBXContainerItemProxy */;
+		};
+		D766BA782121319B00E78B33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D766BA522121319B00E78B33 /* 颜色选择器 */;
+			targetProxy = D766BA772121319B00E78B33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D766BA5C2121319B00E78B33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D766BA5D2121319B00E78B33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D766BA612121319B00E78B33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D766BA622121319B00E78B33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D766BA7D2121319B00E78B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D766BA7E2121319B00E78B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D766BA802121319B00E78B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "颜色选择器/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D766BA812121319B00E78B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "颜色选择器/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D766BA832121319B00E78B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "颜色选择器Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.-----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/颜色选择器.app/颜色选择器";
+			};
+			name = Debug;
+		};
+		D766BA842121319B00E78B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "颜色选择器Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.-----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/颜色选择器.app/颜色选择器";
+			};
+			name = Release;
+		};
+		D766BA862121319B00E78B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "颜色选择器UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "颜色选择器";
+			};
+			name = Debug;
+		};
+		D766BA872121319B00E78B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = "颜色选择器UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "颜色选择器";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D766BA4E2121319B00E78B33 /* Build configuration list for PBXProject "颜色选择器" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D766BA7D2121319B00E78B33 /* Debug */,
+				D766BA7E2121319B00E78B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D766BA7F2121319B00E78B33 /* Build configuration list for PBXNativeTarget "颜色选择器" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D766BA802121319B00E78B33 /* Debug */,
+				D766BA812121319B00E78B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D766BA822121319B00E78B33 /* Build configuration list for PBXNativeTarget "颜色选择器Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D766BA832121319B00E78B33 /* Debug */,
+				D766BA842121319B00E78B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D766BA852121319B00E78B33 /* Build configuration list for PBXNativeTarget "颜色选择器UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D766BA862121319B00E78B33 /* Debug */,
+				D766BA872121319B00E78B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D766BA4B2121319B00E78B33 /* Project object */;
+}

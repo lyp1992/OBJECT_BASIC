@@ -1,0 +1,6 @@
+framework module Pods_YPIMClientTests {
+  umbrella header "Pods-YPIMClientTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
