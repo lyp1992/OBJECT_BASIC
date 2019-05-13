@@ -266,15 +266,72 @@ class LeetCodeTree: NSObject {
         return res
     }
     
-//    Unique Binary Search Trees 给定一个整数，求能组合成多少个二叉搜索树
-//    func numTrees(_ n: Int) -> Int{
-//        if n <= 1 {
-//            return 1
-//        }
-//      var dp = [Int](repeatElement(0, count: n + 1))
-//      dp[0] = 1
-//      dp[1] = 1
-//    
-//        
-//    }
+    //    Unique Binary Search Trees 给定一个整数，求能组合成多少个二叉搜索树: 卡特兰数，给定一个节点，他可能的排列组合是左右子树可能排列组合的乘积 C(t+1) += C(i) * C(t - i)
+    func numTrees(_ n: Int) -> Int{
+        if n <= 1 {
+            return 1
+        }
+      var dp = [Int](repeatElement(0, count: n + 1))
+      dp[0] = 1
+        for j in 1...n {
+            for k in 0..<j{
+                dp[j] += dp[k] * dp[j - 1 - k]
+            }
+        }
+      return dp[n]
+    }
+    
+//    Recover Binary Search Tree 修复二叉搜索树
+//   方法一：思路，设置三个指针，first sec pre pre记住当期那节点的前一个节点值，如果前一个节点大于当前节点，那么设置给first，如果first有值，则设置给sec，最后如果有值，替换
+    var firstEle: TreeNode? = nil
+    var secondEle: TreeNode? = nil
+    var preEle = TreeNode(Int.min)
+    func recoverBST(_ root: TreeNode?) {
+
+        inorderRecoverBst(root)
+        let tmp = secondEle!.val
+        secondEle?.val = firstEle!.val
+        firstEle?.val = tmp
+        
+    }
+    func inorderRecoverBst(_ root: TreeNode?){
+        if root == nil{
+            return
+        }
+        
+        inorderRecoverBst(root?.left)
+        if firstEle == nil && preEle.val >= root!.val{
+            firstEle = preEle
+        }
+        if firstEle != nil && preEle.val >= root!.val {
+            secondEle = root
+        }
+        preEle = root!
+        inorderRecoverBst(root?.right)
+    }
+    
+//     方法二： 设置两个一维变量，一个记录节点，另一个记录节点值，将节点值排序之后，z赋值给节点
+    var list = [TreeNode?]()
+    var listVal = [Int]()
+    func revocerBst2(_ root: TreeNode?){
+    
+        inorderTree(root)
+        listVal.sort()
+        for (i,val) in listVal.enumerated(){
+            let node = list[i]
+            node?.val = val
+        }
+        
+    }
+    func inorderTree(_ root: TreeNode?) {
+        
+        if root == nil{
+            return
+        }
+        inorderTree(root?.left)
+        list.append(root)
+        listVal.append(root!.val)
+        inorderTree(root?.right)
+    }
+    
 }
