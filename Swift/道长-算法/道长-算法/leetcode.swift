@@ -984,5 +984,32 @@ class leetcode: NSObject {
         }
         
     }
+    
+//   给定一个大小为n的数组，里面的数据f满足范围【0，n-1】，不确定重复元素，找到至少一个重复元素。[0,3,3,4,5,6,7,1] 思路L：符号位标记法，取数组index对应的的value，和n进行比较,(第一次取出来的数都满足范围【0，n-1】)如果不大于n，把value当做index 存入数组中，如果有重复的数，那么用相同的数value取变化后数组中取出的value1就会不小于n，那么此时的value就是重复的值
+    func findRepeatElement(_ arr:[Int]) -> Int{
+        var arr1 = arr
+        let n = arr.count
+        for (_,value) in arr1.enumerated() {
+            let rindex = value >= n ? (value - n):value
+            if arr1[rindex] >= n{
+                return rindex
+            }
+            arr1[rindex] = arr1[rindex] + n
+        }
+        return -1 //没找到
+    }
+    func printArr(_ arr:[Int]) {
+        for (index) in arr.enumerated() {
+            print("\(index)" + "\n")
+        }
+    }
+//    217. Contains Duplicate 重复元素
+//    func containsDuplicate(_ nums: [Int]) -> Bool {
+//        
+//        var nums = nums
+//        var haspMap = [Int:Int]()
+//      
+//        
+//    }
 }
 

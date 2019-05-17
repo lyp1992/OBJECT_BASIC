@@ -334,4 +334,67 @@ class LeetCodeTree: NSObject {
         inorderTree(root?.right)
     }
     
+//    129. Sum Root to Leaf Numbers 从根节点到所有节点的和
+//     1
+//    / \
+//    2   3
+//    Therefore, sum = 12 + 13 = 25.
+    func sumNumbers(_ root:TreeNode?) -> Int{
+        return sumNumbersHelper(root, 0)
+    }
+    func sumNumbersHelper(_ root: TreeNode?,_ sum: Int) -> Int{
+        guard let root = root else {
+            return 0
+        }
+        let val = sum * 10 + root.val
+        if root.left == nil && root.right == nil{
+            return val
+        }
+        return sumNumbersHelper(root.left,val) + sumNumbersHelper(root.right, val)
+    }
+    
+    func sumNumbers_stack(_ root:TreeNode?) -> Int{
+        guard let root = root else{
+            return 0
+        }
+        var stack = [(node: root,nodeVal:root.val)]
+        var result = 0
+        while !stack.isEmpty {
+            let item = stack.removeLast()
+            if item.node.left == nil && item.node.right == nil{
+                result += item.nodeVal
+            }
+            if let left = item.node.left{
+                stack.append((node: left, nodeVal: item.nodeVal * 10 + left.val))
+            }
+            if let right = item.node.right{
+                stack.append((node: right, nodeVal: item.nodeVal * 10 + right.val))
+            }
+        }
+        return result
+    }
+    
+    //    124. Binary Tree Maximum Path Sum Input: [-10,9,20,null,null,15,7]
+//
+//    -10
+//    / \
+//    9  20
+//    /  \
+//    15   7
+//    Output: 42
+    func maxPathSum(_ root: TreeNode?) -> Int{
+        var res = Int.min
+        maxPathSumHelper(root, &res)
+        return res
+    }
+    func maxPathSumHelper(_ root: TreeNode?, _ res:inout Int) -> Int {
+        guard let root = root else {
+            return 0
+        }
+        let left = max(maxPathSumHelper(root.left, &res), 0)
+        let right = max(maxPathSumHelper(root.right, &res), 0)
+        res = max(res, left + right + root.val)
+        return max(left, right) + root.val
+    }
+    
 }
