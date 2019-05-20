@@ -1011,5 +1011,110 @@ class leetcode: NSObject {
 //      
 //        
 //    }
+    
+//    动态规划值切割绳子，给一段长度为n的绳子，切割成m份，n>1,m>1,求f(1),f(2),f(3),f(4)....F(m)的最大乘积。比如当n = 8时，最大乘积应该是2 * 3 * 3 = 18，假如第一段是f(i) 最大，那么d余下的f(n - i) 和 f(i)的乘积最大，于是得到 f(n) = max(f(i)*f(n - i))。为了不重复切割，所以 i <= n/2
+
+    func maxLargestProduct(_ length: Int ) -> Int {
+        let length = length
+        if length < 2 {
+            return 0
+        }
+        if  length == 2 {
+            return 1
+        }else if length == 3{
+            return 2
+        }
+        
+        var dp = [Int](repeating: 0, count: (length + 1))//创建一个数组，记录每次的乘积
+        dp[0] = 0
+        dp[1] = 1
+        dp[2] = 2
+        dp[3] = 3
+        let n = length/2
+        for i in 4...length {
+            var max = 0
+            for j in 1..<n{
+                let product = dp[j] * dp[i - j]
+                if product > max{
+                    max = product
+                     dp[i] = max
+                }
+            }
+         
+        }
+        return dp[length]
+    }
+    
+    //   3. 无重复字符的最长子串:
+//    思路：简历一个hashmap，将读取到的字符串往map中添加，如果遇到相同的，将map中这个值置空，设置一个变量j记录重复数据的次数,maxcount记录当前hashmap中最大的无重复子序列
+    func longestString(_ string:String) -> Int{
+        let arr = Array(string)
+        var hashMap = [Character: Int]()
+        var maxCount = 0
+        var j = 0 //记录重复数据的次数
+        var i = 0
+        while i < arr.count {
+            if hashMap[arr[i]] == nil{
+                hashMap[arr[i]] = 0
+                maxCount = max(maxCount, i - j + 1)
+                i += 1
+            }else{
+                hashMap[arr[j]] = nil
+                j += 1
+            }
+        }
+//        以下的写法是错的 i 不能一直加，这里的逻辑应该是，删除haspmap中第一个重复的数，然后在往haspmap中加入后面最后一次出现的数。所以要记住删除前的下标，才能往hasomap中添加
+//        for i in 0..<arr.count {
+//            if hashMap[arr[i]] == nil{
+//                hashMap[arr[i]] = 0
+//                maxCount = max(maxCount, i - j + 1)
+//            }else{
+//                hashMap[arr[j]] = nil
+//                j += 1
+//            }
+//        }
+        return maxCount
+    }
+//    方法二：用指针去记录重复数据的下标，设置left 和right 指针，right指针跟随循环自加，left指向第一个元素，如果有重复的，将left指针重复的那个元素。然后result = right - left + 1
+    func longestString2(_ string: String) -> Int {
+        let arr = Array(string)
+        if arr.count == 0 {
+            return 0
+        }
+        var left = 0
+        var right = 1
+        var res = right - left + 1
+        var i = 0
+        while right < arr.count {
+            i = left
+            while i < right{
+                if arr[i] == arr[right]{
+                    left = i + 1
+                    break
+                }
+                i += 1
+            }
+            res = max(res, right - left + 1)
+            right += 1
+        }
+        return res
+    }
+    
+//    最长公共前缀 14 思路：取sz字符串长度最短的那个，遍历所有的数据，看看是否包含这个词
+    func longestCommonPre(_ strings:[String]) -> String{
+        if strings.count == 0{
+            return ""
+        }
+        let strArr = strings
+        let shortestStr = strArr.min{$0.count < $1.count}!
+        var logestPre = shortestStr
+        for str in strArr{
+                while !str.hasPrefix(logestPre),logestPre.count > 0{
+                    logestPre.removeLast()
+                }
+        }
+        return logestPre
+    }
+    
 }
 

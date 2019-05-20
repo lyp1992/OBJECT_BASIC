@@ -82,6 +82,30 @@
  (46) 如何在不使用第三个变量的前提下交换两个数字?
  (47) 如何确认两个矩形是否重叠?
  (48) 如何设计自动贩卖机?
+ 
+ 
+// 字节跳动
+ 3. 无重复字符的最长子串
+ 14. 最长公共前缀
+ 567. 字符串的排列
+ 43. 字符串相乘
+ 151. 翻转字符串里的单词
+ 93. 复原IP地址
+ 
+ 二、数组与排序
+ 15. 三数之和
+ 674. 最长连续递增序列
+ 
+ 三、链表与树
+ 2. 两数相加
+ 148. 排序链表
+ 142. 环形链表 II
+ 236. 二叉树的最近公共祖先
+ 
+ 四、动态或贪心
+ 121. 买卖股票的最佳时机
+ 122. 买卖股票的最佳时机 II
+ 221. 最大正方形
  */
 
 import Foundation
@@ -170,4 +194,11 @@ let nums2 = [10, 15, 20]
 //let inNode = letNodeT.creatTree([9,3,15,20,7])
 //let postNode = letNodeT.creatTree([9,15,7,20,3])
 
-print(leetc.findRepeatElement([0,2,3,4,5,6,2]))
+//print(leetc.findRepeatElement([0,2,3,4,5,6,2]))
+
+//print(leetc.maxLargestProduct(9))
+
+//print(leetc.longestString2("abcabcbb"))
+
+print(leetc.longestCommonPre(
+    ["flower","flow","flight"]))
