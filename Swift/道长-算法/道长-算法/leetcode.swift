@@ -291,10 +291,10 @@ class leetcode: NSObject {
         var resNode:ListNode?
         
         while linkNode != nil {
-            let tmp = linkNode!.next //取下一个
-            linkNode?.next = resNode
-            resNode = linkNode
-            linkNode = tmp
+            let tmp = linkNode!.next //备份next
+            linkNode?.next = resNode // 更新head的next为新链表
+            resNode = linkNode // 移动新链表的head指针
+            linkNode = tmp // 遍历链表
         }
         return resNode
     }
@@ -322,14 +322,15 @@ class leetcode: NSObject {
         var curr_head: ListNode?
         
         var count = 1
-        while count < m {
+        while count < m {// 将pre指向m-1 的位置，记录逆置数m的前一个数，比如，1->2->3从2开始逆置，记录2的前一个数1
             count += 1
             prev_to_start = start
             start = start?.next
         }
         
         curr_head = start
-        while count <= n{
+        while count <= n{ // 反转m-n间的数
+//            1.备份head->next 2.更新head-next 3.更新newlist的head指针，4.遍历链表
             curr = curr_head
             curr_head = curr_head?.next
             curr?.next = prev
@@ -345,6 +346,42 @@ class leetcode: NSObject {
         return curr
         
     }
+    
+//    反转链表变种：反转两数之间的数据 [1,2,3] 3 3
+    func reverseBetweenYP(_ head: ListNode?,_ m:Int, _ n:Int) ->ListNode?{
+        if head == nil {
+            return nil
+        }
+        var tmpNode:ListNode?
+        var tailNode:ListNode?
+        var reverList:ListNode?
+        var result = head
+        var head = head
+//       记住反转前的m的前一个值
+        var count = 1
+        while head != nil,count < m {
+            tmpNode = head
+            head = head?.next
+            count += 1
+        }
+//        开始反转m - n之间的数
+       tailNode = head //记住现在的链表头，反转之后就是链表尾
+        while head != nil,count <= n{
+            let tmp = head?.next
+            head?.next = reverList
+            reverList = head
+            head = tmp
+            count += 1
+        }
+        tailNode?.next = head //链接反转后链表尾和最后的一段节点，直接b改变指向即可。此时的head就是n的后一个值，tailNode就是链表尾部的值
+        if tmpNode != nil {//说明反转前一个节点不是空
+            tmpNode?.next = reverList
+        }else{
+            result = reverList // 如果是从第一个开始反转，那么直接返回反转后的值
+        }
+        return result
+    }
+    
     func reverseBetween2(_ head: ListNode?, _ m: Int, _ n: Int) -> ListNode? {
         if head == nil {
             return nil
@@ -401,6 +438,40 @@ class leetcode: NSObject {
         head?.next = revercsrTwoRecur(head?.next?.next)
         t?.next = head
         return t
+    }
+    
+    //    旋转链表 思路L:定义快慢指针，快指针先走k步，然后一起走。当快指针走到最后的时候，慢指针的next就是新链表的头，难点L：k大于链表长度和小于链表长度的情况处理。当k大于链表长度时，对k进行取余
+    func rotationList(_ head:ListNode?, _ k:Int) -> ListNode?{
+        if head == nil || head?.next == nil{
+            return head
+        }
+        var head = head
+        var fast = head
+        var slow = head
+        var n = 0
+        while head != nil {
+            n += 1
+            head = head?.next
+        }
+        var count = k % n //需要旋转的次数
+        if count == 0 {
+            return head
+        }
+        while fast?.next != nil,count > 0 {//快先走count步
+            fast = fast?.next
+            count -= 1
+        }
+        while fast?.next != nil {//两个一起走
+            slow = slow?.next
+            fast = fast?.next
+        }
+//        slow的next就是链表的起点
+        let tmp = head
+        head = slow?.next
+        slow?.next = nil
+        fast?.next = tmp
+        
+        return head
     }
     
 //    动态规划-70-climbing stairs 爬楼梯
@@ -1115,6 +1186,8 @@ class leetcode: NSObject {
         }
         return logestPre
     }
+    
+//    567. Permutation in String 两个字符串，第一个字符串的全排列是第二个字符串的子字符串
     
 }
 
