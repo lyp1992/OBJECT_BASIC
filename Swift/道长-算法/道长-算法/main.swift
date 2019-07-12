@@ -156,10 +156,13 @@ let leetc: leetcode = leetcode()
 //print(leetc.permuta(nums1))
 //print(leetc.permuta(nums1))
 //print(leetc.isPerfectSquare3(1))
-let threSum = [-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6]
+//let threSum = [-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6]
 //print(leetc.threeSum(threSum))
-
 //print(leetc.permutation(nums1))
+//[1,2,3], [1,1]
+//print(leetc.findContentChildren([1,2,3], [1,1]))
+print(leetc.removeKdigits("100200", 1))
+
 
 let list2: List = List()
 list2.appendTail(1)
@@ -168,11 +171,14 @@ list2.appendTail(3)
 list2.appendTail(4)
 list2.appendTail(5)
 list2.appendTail(6)
+list2.appendTail(7)
+list2.appendTail(8)
+list2.appendTail(2)
 
 var listN:ListNode?
 //listN = leetc.reverseTwo(list2.head)
-listN = leetc.reverseTwo2(list2.head)
-//list.printList(listN)
+//listN = leetc.reverseTwo2(list2.head)
+//list.printList(list2.head)
 
 //print(leetc.climbingStairs(4))
 
@@ -200,5 +206,9 @@ let nums2 = [10, 15, 20]
 
 //print(leetc.longestString2("abcabcbb"))
 
-print(leetc.longestCommonPre(
-    ["flower","flow","flight"]))
+//print(leetc.longestCommonPre(
+//    ["flower","flow","flight"]))
+
+//let leetcodeL = LeetCodeList()
+//print(leetcodeL.findCycleStart(list2.head));
+

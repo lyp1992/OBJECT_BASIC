@@ -1189,5 +1189,130 @@ class leetcode: NSObject {
     
 //    567. Permutation in String 两个字符串，第一个字符串的全排列是第二个字符串的子字符串
     
+//    376. Wiggle Subsequence 摇摆序列，最长子串
+    func wiggleSubsequence(_ nums:[Int]) -> Int{
+        if nums.count < 2 {
+            return nums.count
+        }
+        let begin = 0
+        var status = begin
+        let down = 1
+        let up = 2
+        var maxLength = 1
+        let nums = nums
+        for i in 1..<nums.count {
+            switch status{
+            case begin:do {
+                if nums[i - 1] < nums[i]{
+                    status = up
+                     maxLength += 1
+                }else if nums[i - 1] > nums[i] {
+                    status = down
+                    maxLength += 1
+                }
+                break;
+                }
+            case down:do {
+                if nums[i - 1] < nums[i]{
+                    status = up
+                    maxLength += 1
+                }
+                }
+            case up:do {
+                if nums[i - 1] > nums[i]{
+                    status = down
+                    maxLength += 1
+                }
+                break;
+                }
+                
+            default:
+                break;
+            }
+        }
+        return maxLength
+    }
+    
+    //    分糖果：每个孩子的需求因子的数组g 糖果的重量数组s 。每个孩子的得到的糖果必须>=糖果重量 每个孩子最多只能得到一个糖果。问:最多能满足多少个孩子
+//    思路：贪心算法，给孩子的需求因子排序，糖果重量排序；大唐果满足小需求孩子，和大唐果满足大需求孩子得到的结果是一样的。所以我们只需要按孩子的需求因子从小到大和糖果的大小进行匹配。
+    func findContentChildren(_ g: [Int], _ s: [Int]) -> Int {
+
+        var gs = g.sorted()
+        var ss = s.sorted()
+        var child = 0
+        var cookie = 0
+        while cookie <= (ss.count - 1) && child <= (gs.count - 1){
+            if ss[cookie] >= gs[child]{
+                child += 1
+            }
+            cookie += 1
+        }
+        return child
+    }
+    
+//    移除k个字符串：已知一个使用字符串表示的非负整数num，将num中的k个数字移 除，求移除k个数字后，可以获得的最小的可能的新数字。
+//    输入 : num = “1432219” , k = 3 在去掉3个数字后得到的很多很多可能里，如1432、4322、2219、1219
+//    、1229...; 去掉数字4、3、2得到的1219最小!
+//    思路：1.暴力求解，移除所有的可能，进行比较
+//    2.利用栈，将数字压栈，当栈顶的数字比新加入的数字大时，移除栈中数字，加入新数字。有两种情况需要重新考虑，第一：加入遍历完了，k还是大于0怎么办，比如12345 第二：假如删除数字包含0怎么办
+    func removeKdigits(_ num: String, _ k: Int) -> String {
+    
+        if num.count == 0 || num.count > 10002 || nums.count < k {
+            return "0"
+        }
+        var stacks = [Character]()
+        var k = k
+        
+        for character in num {
+            while stacks.count != 0 && stacks[stacks.count - 1] > character && k > 0{
+                stacks.removeLast()
+                k -= 1
+            }
+            if character != "0" || stacks.count != 0{
+                stacks.append(character)
+            }
+        }
+//        处理特殊情况
+        while stacks.count > 0 && k>0 {
+            stacks.removeLast()
+            k -= 1
+        }
+        
+//        取出stack中的数字，拼接字符串，返回
+        if stacks.count == 0 {
+            return "0"
+        }
+        let res = String(stacks)
+        return res
+    }
+    
+    //    Jump Game 55 跳跃游戏 一个数组存储了非负整型数据，数组中的第i个元素a[i]，代表了可以从数组第i个 位置最多向前跳跃a[i]步;已知数组各元素的情况下，求是否可以从数组的第0
+//    个位置跳跃到数组的最后一个元素的位置?
+//    例如:
+//    nums = [2, 3, 1, 1, 4] ，可以从nums[0] = 2 跳跃至 nums[4] = 4; nums = [3, 2, 1, 0, 4] ，不可以从nums[0] = 3 跳跃至 nums[4] = 4。
+    
+//    思路：贪心算法，可以跳跃的最大步数是 index[i] + i
+    
+    func canJump(_ nums: [Int]) -> Bool {
+        var nums = nums
+        var maxJumps = [Int]()
+        for i in 0..<nums.count {
+            let maxJump = nums[i] + i
+            maxJumps.append(maxJump)
+        }
+        var jump = 0
+        var max_index = maxJumps[0]
+        while jump < maxJumps.count && jump <= max_index {
+            if max_index < maxJumps[jump]{
+                max_index = maxJumps[jump]
+            }
+            jump += 1
+        }
+        if jump == maxJumps.count {
+            return true
+        }
+        return false
+    }
+    
 }
 

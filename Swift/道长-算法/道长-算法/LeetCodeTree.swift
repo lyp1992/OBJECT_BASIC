@@ -397,4 +397,214 @@ class LeetCodeTree: NSObject {
         return max(left, right) + root.val
     }
     
+//    236 最近公共祖先 思路：1，找到要搜索的节点，并且将经过的s路劲记录下 2，找到两条路径的距离根节点最远的公共节点。eg 3->5->6
+//                          3->5->4->2
+    func lowestCommonAncestor(_ node:TreeNode?,_ pNode: Int,_ qNode: Int) -> Int{
+        
+        var qStack = [Int]()
+        var pStack = [Int]()
+        let node = node
+        var qres = [Int]()
+        var pres = [Int]()
+        var pfinish = false
+        var qfinish = false
+//      搜索路劲
+        lowestCommonAncestor_helper(node, &pStack, pNode, &pres, &pfinish)
+        lowestCommonAncestor_helper(node, &qStack, qNode, &qres, &qfinish)
+        
+//      查找距离跟节点最远的公共点
+        return lowestCommonAncestor_helper2(pres, qres)
+    }
+    func lowestCommonAncestor_helper2(_ pres: [Int],_ qres: [Int]) -> Int{
+        var res = 0
+        for (_,pval) in pres.enumerated() {
+            for (_, qval) in qres.enumerated(){
+                if pval == qval{
+                    res = pval
+                }
+            }
+        }
+        return res
+    }
+    func lowestCommonAncestor_helper(_ node:TreeNode?,_ path: inout [Int],_ searchNode:Int,_ res: inout [Int],_ finish:inout Bool){
+        
+        if node == nil || finish == true {
+            return
+        }
+        path.append(node!.val)
+        if node!.val == searchNode{
+            finish = true
+            res = path
+        }
+        lowestCommonAncestor_helper(node?.left, &path, searchNode,&res, &finish)
+        lowestCommonAncestor_helper(node?.right, &path, searchNode,&res, &finish)
+        path.removeLast()
+    }
+    
+//    114. Flatten Binary Tree to Linked List、将树转换成链表
+//    思路：1.前序遍历y所有的元素，然后加入到链表中，但是这种方法不满足原地排序
+    func flatten(_ root: TreeNode?) {
+        var queue = [TreeNode]()
+
+        flatten_helper(root, &queue)
+        if queue.count <= 1 {
+            return
+        }
+        for i in 1..<queue.count {
+            let left = queue[i]
+            let right = queue[i - 1]
+            right.left = nil // 将左节点置空
+            right.right = left
+        }
+    }
+    func flatten_helper(_ root: TreeNode?,_ queue: inout [TreeNode]){
+        if root == nil {
+            return
+        }
+        queue.append(root!)
+        flatten_helper(root?.left, &queue)
+        flatten_helper(root?.right, &queue)
+    }
+    
+//    199. Binary Tree Right Side View 侧面观察二叉树，将侧面观察到的数据输出
+//    思路：层次遍历二叉树，输出每一层的最后一个点
+    func rightSideView(_ root: TreeNode?) -> [Int] {
+        if root == nil {
+            return []
+        }
+        var queue = [TreeNode]()
+        var res = [Int]()
+        queue.append(root!)
+        while queue.count > 0 {
+            let count = queue.count
+            for i in 0..<count{
+                let node = queue.removeFirst()
+                if i == 0{
+                    res.append(node.val)
+                }
+                if let right = node.right{
+                    queue.append(right)
+                }
+                if let left = node.left{
+                    queue.append(left)
+                }
+            }
+        }
+        return res
+    }
+    
+/******问题归属于二叉树*********/
+//    35. Search Insert Position 往数组中插入一个数二分查找，然后插入。
+//    思路：二分查找，当target 在nums中，直接返回mid 如果不在，那么1、target>mid && target < mid + 1  2、target<mid && target>mid-1 3、临界：mid == 0 || mid == count
+    func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+        var index = -1
+        var begin = 0
+        var end = nums.count - 1
+        while index == -1 {
+            let mid = (begin + end)/2
+            if target == nums[mid]{
+                index = mid
+            }else if target < nums[mid]{
+                if mid == 0 || target > nums[mid - 1]{
+                    index = mid
+                }
+                end = mid - 1
+            }else if target > nums[mid]{
+                if  mid == nums.count - 1 || target < nums[mid + 1]{
+                    index = mid + 1
+                }
+                begin = mid + 1
+            }
+        }
+        return index
+    }
+    
+//    34. Find First and Last Position of Element in Sorted Array  给定一个排序数组和一个target。求这个target在数组中出现的区间。eg：[5,7,7,8,8,8,8,10] target = 8 返回[3,6] 。如果target = 6 返回[-1,-1],
+//    思路：我们要求左端点和右端点。如果target 在nums 中。target == mid && target > mid - 1 那么左端点就是mid - 1 或者target == mid &&target < mid + 1 那么右断点就是mid + 1
+    func searchRange(_ nums: [Int], _ target: Int) -> [Int] {
+        var res = [Int]()
+        let left = left_bound(nums, target)
+        let right = right_bound(nums, target)
+        res.append(left)
+        res.append(right)
+        return res
+    }
+    func left_bound(_ nums:[Int],_ target:Int) ->Int{
+        var begin = 0
+        var end = nums.count - 1
+        while begin <= end {
+            let mid = (begin + end)/2
+            if target == nums[mid]{
+                if mid == 0 || nums[mid - 1] < target{
+                    return mid
+                }
+                end = mid - 1
+            }else if (target > nums[mid]){
+                begin = mid + 1
+            }else if (target < nums[mid]){
+                end = mid - 1
+            }
+        }
+        return -1
+    }
+    func right_bound(_ nums:[Int],_ target:Int) ->Int{
+        var begin = 0
+        var end = nums.count - 1
+        while begin <= end {
+            let mid = (begin + end)/2
+            if target == nums[mid]{
+                if mid == nums.count - 1 || nums[mid + 1] > target{
+                    return mid
+                }
+                begin = mid + 1
+            }else if (target > nums[mid]){
+                begin = mid + 1
+            }else if (target < nums[mid]){
+                end = mid - 1
+            }
+        }
+        return -1
+    }
+    
+//    33. Search in Rotated Sorted Array 旋转数组：给定一个数组，起先是一个有序的，但是他可以将内部的元素旋转。比如[1,2,3,4,5,6,7]->[4,5,6,7,1,2,3] 给定一个target，问，target在不在数组中
+//    思路：确定递增区间，和旋转区间。然后去对应的区间寻找target
+    func search(_ nums: [Int], _ target: Int) -> Int {
+        
+        var begin = 0
+        var end = nums.count - 1
+        while begin <= end {
+            let mid = (begin + end)/2
+            if target == nums[mid]{
+                return mid
+            }else if (target < nums[mid]){//确认递增区间和旋转区间
+                if nums[begin] < nums[mid]{//递增区间
+                    if target >= nums[begin]{
+                        end = mid - 1
+                    }else{
+                        begin = mid + 1
+                    }
+                }else if(nums[begin] > nums[mid]){
+                    end = mid - 1
+                }else if nums[begin] == nums[mid]{
+                    begin = mid + 1
+                }
+                
+            }else if (target > nums[mid]){
+                if nums[begin] < nums[mid]{
+                    begin = mid + 1
+                }else if (nums[begin] > nums[mid]){//begin mid 旋转区间
+                    if target >= nums[begin]{
+                        end = mid - 1
+                    }else {
+                        begin = mid + 1
+                    }
+                }else if (nums[begin] == nums[mid]){
+                    begin = mid + 1
+                }
+            }
+        }
+        return -1
+    }
+    
+  
 }

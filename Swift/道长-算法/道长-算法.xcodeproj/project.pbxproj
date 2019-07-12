@@ -20,6 +20,7 @@
 		99A28FA6226822FF00D44FD0 /* TreeNodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A28FA5226822FF00D44FD0 /* TreeNodeTool.swift */; };
 		99A28FA822686AE100D44FD0 /* O^2Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A28FA722686AE100D44FD0 /* O^2Tool.swift */; };
 		99DC01CB226D55A200EE5875 /* leetcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC01CA226D55A200EE5875 /* leetcode.swift */; };
+		99F907CF22AE5BEE00610313 /* LeetCodeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F907CE22AE5BEE00610313 /* LeetCodeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		99A28FA5226822FF00D44FD0 /* TreeNodeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNodeTool.swift; sourceTree = "<group>"; };
 		99A28FA722686AE100D44FD0 /* O^2Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "O^2Tool.swift"; sourceTree = "<group>"; };
 		99DC01CA226D55A200EE5875 /* leetcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leetcode.swift; sourceTree = "<group>"; };
+		99F907CE22AE5BEE00610313 /* LeetCodeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				99A28FA722686AE100D44FD0 /* O^2Tool.swift */,
 				99DC01CA226D55A200EE5875 /* leetcode.swift */,
 				9985402A2283CABC0063ED16 /* LeetCodeTree.swift */,
+				99F907CE22AE5BEE00610313 /* LeetCodeList.swift */,
 			);
 			path = "道长-算法";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				998F300C226718D400303759 /* QueueProtocol.swift in Sources */,
 				99A28FA6226822FF00D44FD0 /* TreeNodeTool.swift in Sources */,
 				9920C9C52265CEDF0092856A /* List.swift in Sources */,
+				99F907CF22AE5BEE00610313 /* LeetCodeList.swift in Sources */,
 				9920C9BF226584AB0092856A /* ArrayToStack.swift in Sources */,
 				99A28FA822686AE100D44FD0 /* O^2Tool.swift in Sources */,
 				9985402B2283CABC0063ED16 /* LeetCodeTree.swift in Sources */,
