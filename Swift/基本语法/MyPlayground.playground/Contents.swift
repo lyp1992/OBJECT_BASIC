@@ -299,3 +299,16 @@ var nums2 = [4,6,5]
 var num = nums1 + nums2
 
 print(num.sorted())
+
+func balance(_ x: inout Int,_ y: inout Int){
+    let sum = x + y
+    x = 2
+    y = sum - x
+}
+
+var num3 = 20
+var num4 = 10
+balance(&num4, &num3)
+
+// 内存冲突： 就是这个函数什么也不干，编译器也不能通过
+//balance(&num3, &num3)
