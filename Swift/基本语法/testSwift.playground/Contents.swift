@@ -873,20 +873,20 @@ func divide(num1: Int,num2: Int) throws -> Int{
 //var res1 = try divide(num1: 10, num2: 0)
 
 // 可以用do catch 捕捉错误
-func test(){
-    do {
-       print(try divide(num1: 20, num2: 0))
-    } catch let SomeError.illegalArg(msg){
-        print("参数异常：\(msg)")
-    }catch let SomeError.outOfBounds(size, index){
-        print("下标越界：size =\(size) index = \(index)")
-    }catch SomeError.outOfMemory{
-        print("内存溢出")
-    }catch{
-        print("其他问题")
-    }
-}
-test()
+//func test5(){
+//    do {
+//       print(try divide(num1: 20, num2: 0))
+//    } catch let SomeError.illegalArg(msg){
+//        print("参数异常：\(msg)")
+//    }catch let SomeError.outOfBounds(size, index){
+//        print("下标越界：size =\(size) index = \(index)")
+//    }catch SomeError.outOfMemory{
+//        print("内存溢出")
+//    }catch{
+//        print("其他问题")
+//    }
+//}
+//test5()
 
 /*
 处理error的两种方式
@@ -1033,4 +1033,402 @@ stuP.study()
 var yPStr: String = "1"
 yPStr.append("2")
 yPStr = yPStr + "_3"
+
+/*
+ 
+_ 匹配任何值
+_? 匹配非nil值
+
+ */
+
+enum Life{
+    case human(name:String,age:Int?)
+    case animal(name:String,age:Int?)
+}
+func check(_ life:Life){
+    switch life {
+    case .human(let name, _):
+        print("human",name);
+    case .animal(let name, _?):
+        print("animal",name);
+    default:
+        print("other");
+    }
+}
+check(Life.human(name: "lyp", age: nil))
+check(Life.animal(name: "deven", age: 10))
+
+/*
+ 值绑定模式
+ */
+let point2 = (10,10)
+switch point2 {
+case let(x,y):
+    print("x = \(x),y = \(y)")
+default:
+    print("other")
+}
+
+/*
+ 元组模式
+ */
+let points = [(0,0),(1,1),(2,2)]
+for (x,y) in points{
+    print(x,y)
+}
+
+let name2:String? = "lyp"
+let age = 18
+let info:Any = [1,2]
+switch (name,age,info) {
+case (_ , _ , _ as Array<Any>):
+    print("case")
+default:
+    print("default")
+}
+
+/*
+ 枚举case情况
+ if case 等价于一个case的switch情况
+ */
+let age2 = 2
+if case 0...9 = age2{
+    print("当中有等于\(age2)")
+}
+// swift 4.0 报错
+//guard case 0...9 = age2 else {
+//    return
+//}
+//print("当中有等于\(age2)")
+let ages: [Int?] = [1,2,nil,3,4]
+for case nil in ages{
+    print("有空值在a数组中")
+    break
+}
+/*
+ 可选类型
+ */
+for case let age? in ages{
+    print("age = \(age)")
+}// 1,2,3,4
+
+/*
+ 类型转换
+ */
+let num6:Any = 6
+switch num6 {
+case is Int:
+    print("num6 is Int = \(num6)")
+default:
+    print("num6 is other")
+}
+
+class AnimalDeven {
+    func eat(){
+        print(type(of:self),"eat")
+    }
+}
+class DogDeven: AnimalDeven {
+    func run(){
+        print(type(of:self),"run")
+    }
+}
+class CatDeven: AnimalDeven {
+    func go(){
+        print(type(of:self),"go")
+    }
+}
+func checkDeven(_ animal:AnimalDeven){
+    switch animal {
+    case let dog as DogDeven:
+        dog.run()
+        dog.eat()
+    case let cat as CatDeven:
+        cat.go()
+    default:
+        break
+    }
+}
+checkDeven(DogDeven())
+checkDeven(CatDeven())
+
+/*
+ 表达式模式
+ */
+switch point {
+case (0,0):
+    print("(0,0) is origin")
+case (-2...2,-2...2):
+    print("\(point.0) \(point.1) is near the origin")
+default:
+    print("other")
+}
+/*
+ 自定义表达模式
+通过重载运算符，自定义表达式模式的匹配规则
+ **/
+//class studentDeven{
+//    var score:Int = 0 , name = ""
+//    static func
+//}
+
+
+/*
+ 函数式编程
+ */
+// Array 的常见用法
+var arrT = [1,2,3,4]
+//var arrT2 = arrT.map { (num) -> Int in
+//    num * 2
+//} // 2,4,6,8
+// map 映射完了是一个新数组
+var arrT2 = arrT.map { $0 * 2 } // 2,4,6,8  // map 是遍历每一个值
+print(arrT2)
+var arrT3 = arrT.filter { (num) -> Bool in
+    num % 2 == 0
+}// 2,4 filter 过滤器
+print(arrT3)
+var arrT4 = arrT.reduce(0) { (result, num) -> Int in
+    result + num
+} // 10 result是第一次传入的值
+print(arrT4)
+
+//封装map方法
+func double(_ i:Int) ->Int{ return i * 2}
+print(arrT.map(double))
+//[[1], [2, 2], [3, 3, 3], [4, 4, 4, 4]]
+var arrT5 = arrT.map{Array.init(repeating:$0,count:$0)}
+print(arrT5)
+//[1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+var arrT6 = arrT.flatMap { (num) -> Array<Any> in
+    Array.init(repeating: num, count: num)
+}// 平铺
+print(arrT6)
+
+// compactMap 返回值时可以自动屏蔽nil值
+var arrT1 = [1,2,3,4,nil]
+var arrT11 = arrT1.compactMap { (num) -> Int? in
+    return num
+}
+print("arrT11 = \(arrT11)")
+
+// 用reduce 实现map 和filter的功能
+var arrT7 = arrT.reduce([]) { $0 + [$1 * 2]}// 实现map功能 方法 -
+var arrT8 = arrT.reduce([]) { (result, num) -> Array<Any> in
+    let resVar = num * 2
+    var res = result
+    res.append(resVar)
+    return res
+} // 实现map功能 方法 二
+print(arrT7)
+print(arrT8)
+
+// 实现filter功能
+var arrT9 = arrT.reduce([]) {$1 % 2 == 0 ? $0 + [$1] : $0}
+var arrT10 = arrT.reduce([]) { (result, num) -> Array<Any> in
+    var res = result
+    if num % 2 == 0{
+    res.append(num)
+    }
+    return res
+}
+print(arrT9)
+print(arrT10)
+
+// lazy 的优化
+let resultT = arrT.lazy.map { (num) -> Int in
+    print("map i = \(num)")
+    return num * 2
+}
+print(resultT[0]) // 延时取值
+
+/*
+ optional 的map 和flatMap
+ **/
+var numTM : Int? = 10
+var numTM1 = numTM.map { $0 * 2}
+print(numTM1) // Optional(20)
+
+var numTM2 : Int? = nil
+var numTM3 = numTM2.map { $0 * 2}
+print(numTM3) //nil
+
+var numTM4 = numTM.map{Optional.some($0 * 2)}
+print(numTM4)// Optional(Optional(20))
+
+var numTM5 = numTM
+
+/*
+ 函数式编程（Function programming）：将计算过程尽量分解成可复用函数的调用。
+ 函数与其他数据类型具有一样的地位，可以作为函数参数，函数返回值s
+ 
+ 假如要实现一下功能：[(num + 3) * 5 - 1] % 10 /2
+ */
+
+//func add(_ a:Int,_ b:Int) -> Int{ return a + b }
+//func sub(_ a:Int,_ b:Int) -> Int{ return a - b }
+//func multiple(_ a: Int, _ b: Int) -> Int{return a*b}
+//func divide(_ a:Int,_ b:Int) -> Int{return a/b }
+//func mod(_ a:Int,_ b:Int) -> Int{return a%b }
+//
+//let num10 = 10
+//let resNum101 = ((((num10 + 3) * 5) - 1) % 10) / 2
+//let resNum10 = divide(mod(sub(multiple(add(num10, 3), 5), 1), 10), 2)
+//print(resNum10,resNum101)
+
+// 函数式写法
+//func add(_ a:Int) ->(Int) ->Int{
+//    var num1 = 0
+//    func addNum(_ num:Int) -> Int{
+//        num1 = num + a
+//      return num1
+//    }
+//    return addNum
+//}
+// 在swift5.1 中可以写成 add(_ a:Int) ->(Int) ->Int{{$0 + a}} 省略了return
+ func add(_ a:Int) ->(Int) -> Int{
+    return{
+            return $0 + a
+        }
+}
+func sub(_ a:Int) ->(Int) -> Int{
+    return{
+        return $0 - a
+    }
+}
+func mutiple(_ a: Int) ->(Int) ->Int{
+    return{
+        return $0 * a
+    }
+}
+func divide(_ a: Int) ->(Int) -> Int{
+    return {
+        return $0 / a
+    }
+}
+func mod(_ a:Int) ->(Int) -> Int{
+    return{
+        return $0 % a
+    }
+}
+// 优先级
+//infix operator >>>: AdditionPrecedence
+//func >>><A,B,C>(_ f1:(A) -> B,_ f2:(B) -> A) -> (A) -> C{
+//    return {
+//        return f2(f1($0))
+//    }
+//}
+//var fn = add(3) >>> mutiple(5) >>> sub(5) >>> divide(2) >>> mod(2)
+
+
+// 面向协议POP ，可以解决菱形继承，将共有的方法抽取到父类中
+/*
+    尽量用值类型，不要用class类型
+ */
+// 利用协议实现前缀
+struct YP<Base>{
+    let base: Base
+    init(_ base: Base) {
+        self.base = base;
+    }
+}
+
+//eg: 实现一个字符串的打印
+protocol YPCompatible{}
+extension YPCompatible{
+    static var Yp: YP<Self>.Type{
+        get{
+           return YP<Self>.self
+        }
+        set{}
+    }
+    var Yp: YP<Self>{
+        get{
+          return YP(self)
+        }
+        set{}
+    }
+}
+
+extension String: YPCompatible{}
+extension YP where Base == String{
+    func numberCount() -> Int{
+        var count = 0
+        for c in base where("0"..."9").contains(c) {
+            count += 1
+        }
+        return count
+    }
+}
+var ypString = "123rty79vbnm12"
+ypString.Yp.numberCount()
+
+struct YX<Base>{
+    let base: Base
+    init(_ base: Base) {
+        self.base = base
+    }
+}
+protocol YXCompatible{}
+extension YXCompatible{
+    var Yx:YX<Self>{
+        get{ return YX(self) }
+        set{}
+    }
+    
+    static var Yx:YX<Self>.Type{
+        get{ return YX<Self>.self}
+        set{}
+    }
+}
+
+// Base 类
+class YPPerson{}
+class YPStudent: YPPerson {}
+
+extension YPPerson:YPCompatible{}
+extension YP where Base:YPPerson{
+    static func testY(){}
+    func run(){}
+}
+YPPerson.Yp.testY()
+YPStudent.Yp.testY()
+let YpStu = YPStudent()
+YpStu.Yp.run()
+
+// Base 协议
+extension NSString: YPCompatible{}
+extension YP where Base: ExpressibleByStringLiteral{
+    func numCount() -> Int{
+        let baseStr = base as! String
+        var count = 0
+        for c in baseStr where("0"..."9").contains(c){
+            count += 1
+        }
+        return count
+    }
+}
+
+let YpStrObj: NSString = "123jhgc0987s"
+let YpMStrObj : NSMutableString = "kjhgf12387mnbv"
+print(yPStr.Yp.numCount(),YpStrObj.Yp.numCount(),YpMStrObj.Yp.numCount())
+
+// 利用协议实现类型判断
+func isArray(_ value: Any) -> Bool{  return value is [Any] }
+
+isArray([1,2])
+isArray((1,2))
+isArray(["1",2])
+isArray(NSArray())
+isArray(NSMutableArray())
+
+protocol ArrayType{}
+extension Array:ArrayType{}
+extension NSArray: ArrayType{}
+func isArrayType(_ value: Any.Type) -> Bool{return value is ArrayType.Type }
+isArrayType([Any].self)
+isArrayType([Int].self)
+isArrayType(NSArray.self)
+isArrayType(NSMutableArray.self)
+
 

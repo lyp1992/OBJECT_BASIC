@@ -8,11 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+
+class ViewController: UIViewController {
+    struct Dog {
+        var name = "dog"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        var dog1 = Dog(name: "dog1")
+        var dog2:Dog
+        dog2 = dog1
+        dog1.name = "dog111"
+        print(dog1.name, dog2.name)
+        
+        
 //        let p = Person(age: 10, withName: "lyx")
 //        p.run()
 /*
@@ -46,5 +57,7 @@ class ViewController: UIViewController {
 //        return a + b
 //    }
 
+//    func add(_ a:Int) ->(Int) -> Int{{ $0 + a }}
+  
 }
 
